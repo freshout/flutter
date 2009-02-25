@@ -6,7 +6,7 @@ class RCCWP_Processor
 		require_once('RC_Format.php');
 		global $CUSTOM_WRITE_PANEL;
 		
-		
+        wp_enqueue_script('jquery-ui-sortable');
 		
 		if (isset($_POST['edit-with-no-custom-write-panel']))
 		{
