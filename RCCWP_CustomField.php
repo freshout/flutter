@@ -275,18 +275,25 @@ class RCCWP_CustomField
     }
 
     /**
-     * Get field duplicates
-     *
-     *
-     */ 
-     function GetFieldsOrder($postId,$fieldName){
-         global $wpdb;
+    * Get field duplicates
+    *
+    *
+    */ 
+    function GetFieldsOrder($postId,$fieldName){
+        global $wpdb;
 
-         $tmp =  $wpdb->get_col(
-                                    "SELECT field_count FROM ".RC_CWP_TABLE_POST_META." WHERE field_name = '{$fieldName}' AND post_id = {$postId} GROUP BY field_count ORDER BY field_count ASC"
-                                );
+        $tmp =  $wpdb->get_col(
+                                   "SELECT field_count FROM ".RC_CWP_TABLE_POST_META." WHERE field_name = '{$fieldName}' AND post_id = {$postId} GROUP BY field_count ORDER BY field_count ASC"
+                              );
 
-         return $tmp;
+        //if the array is  empty is because this field is new and don't have
+        //a data related with this post 
+        //then we just create with the index 1
+        if(empty($tmp)){
+            $tmp[0] = 1;
+        }
+
+        return $tmp;
      }
 
     /**
@@ -304,6 +311,12 @@ class RCCWP_CustomField
          $tmp =  $wpdb->get_col(
                                    "SELECT group_count  FROM ".RC_CWP_TABLE_POST_META." WHERE field_name = '{$fieldName}' AND   post_id = {$postId} GROUP BY group_count ORDER BY order_id asc"
                                  );
+
+         //if the array is  empty is because this field is new and don't have
+         //a data related with this post 
+         //then we just create with the index 1
+         $tmp[0] = 1;
+
          
          //the order start to 1  and the arrays start to 0
          //then i just sum one element in each array key for 
