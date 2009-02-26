@@ -170,20 +170,7 @@ class RCCWP_Post {
 						$finalValue = stripslashes(trim($customFieldValue));
 					}
             
-                    //Multiline
-		    
-		            
-        
-			require_once("RCCWP_CustomField.php");
-			$type_filed = RCCWP_CustomField::Get($key->id);
-	
-			// tag p in multiline
-			if($type_filed->type == "Multiline Textbox"){
-					
-						$finalValue=str_replace("\r\n","<br />",$finalValue);
-						$finalValue = "<p>" . str_replace("<br /><br />", "</p><p>", $finalValue) . "</p>";
-						//$finalValue = nl2br($finalValue);
-			}
+                   
     				// Add field value meta data
 					add_post_meta($postId, $customFieldName, $finalValue);
 					$fieldMetaID = $wpdb->insert_id;
