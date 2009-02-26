@@ -602,7 +602,7 @@ class RCCWP_WritePostPage {
                         
                         if(isset($_REQUEST['post'])){
                             $fc = RCCWP_CustomField::GetFieldDuplicates($_REQUEST['post'],$field->name,$groupCounter);
-                            $fields_order =  RCCWP_CustomField::GetFieldsOrder($_REQUEST['post'],$field->name);
+                            $fields_order =  RCCWP_CustomField::GetFieldsOrder($_REQUEST['post'],$field->name,$groupCounter);
                             foreach($fields_order as $element){
                             //if($fc < 1) $fc = 1;
                             //for($i = 1;$i <= $fc;$i++){

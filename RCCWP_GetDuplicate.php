@@ -19,7 +19,8 @@
 		$customFieldId = $_POST['customFieldId'];
 		$groupCounter = $_POST['groupCounter'];
 		$fieldCounter = $_POST['fieldCounter'];
-		RCCWP_WritePostPage::CustomFieldInterface($customFieldId, $groupCounter, $fieldCounter);
+        $groupId = $_POST['groupId'];
+		RCCWP_WritePostPage::CustomFieldInterface($customFieldId, $groupCounter, $fieldCounter,$groupId);
 		?>
 		<?php
 	}

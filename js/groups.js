@@ -55,6 +55,8 @@ jQuery(document).ready(function(){
         customFieldId =  inputName.split("_")[0];
         groupCounter = inputName.split("_")[1];
 
+        groupId = inputName.split("_")[3];
+
         oldval = jQuery("#c"+inputName+"Counter").val();    
         newval = parseInt(oldval) + 1; 
         jQuery("#c"+inputName+"Counter").val(newval); 
@@ -63,7 +65,7 @@ jQuery(document).ready(function(){
         counter = jQuery("#c"+inputName+"Counter").val();
         div  = "c"+inputName+"Duplicate";
 
-        getDuplicate(customFieldId,counter,div,groupCounter);
+        getDuplicate(customFieldId,counter,div,groupCounter,groupId);
 
 
     });
@@ -73,11 +75,11 @@ jQuery(document).ready(function(){
 /**
  * field duplicate 
  */
-getDuplicate = function(fId,fcounter,div,gcounter){
+getDuplicate = function(fId,fcounter,div,gcounter,groupId){
     jQuery.ajax({
         type : "POST",
         url  : flutter_path+'RCCWP_GetDuplicate.php',
-        data : "customFieldId="+fId+"&fieldCounter="+fcounter+"&groupCounter="+gcounter,
+        data : "customFieldId="+fId+"&fieldCounter="+fcounter+"&groupCounter="+gcounter+"&groupId="+groupId,
         success: function(msg){
             jQuery("#"+div).after(msg);
         }
