@@ -492,23 +492,14 @@ class RCCWP_WritePostPage {
                 //the order  of the groups
                 $firstFieldName = $customFields[0]->name;
 
-                //$duplicates  = RCCWP_CustomField::GetFieldGroupDuplicates($_REQUEST['post'], $firstFieldName);
                 $order = RCCWP_CustomField::GetOrderDuplicates($_REQUEST['post'],$firstFieldName);
 
-                //if ($duplicates < 1) $duplicates = 1;//for backward compatability
                 ?> 
                 <div class="write_panel_wrapper"  id="write_panel_wrap_<?php echo $customGroup->id;?>"><?php
                 
                 //build the group duplicates 
                 foreach($order as $key => $element){
-				/*for($i= 1 ;$i<=$duplicates;$i++){
-                    if($customGroup->name != "__default"){
-                        //order the groups
-                        $order_id = $wpdb->get_var('select order_id from '.RC_CWP_TABLE_POST_META.' where post_id = '.$post->ID.' and group_count = '.$i.' limit 1');
-                    }else{
-                        $order_id = 1;
-                    }*/
-                   ?>
+				?>
                     <?php RCCWP_WritePostPage::GroupDuplicate2($customGroup,$element,$key,false);?>
                    <?php 
 				}
@@ -604,8 +595,6 @@ class RCCWP_WritePostPage {
                             $fc = RCCWP_CustomField::GetFieldDuplicates($_REQUEST['post'],$field->name,$groupCounter);
                             $fields_order =  RCCWP_CustomField::GetFieldsOrder($_REQUEST['post'],$field->name,$groupCounter);
                             foreach($fields_order as $element){
-                            //if($fc < 1) $fc = 1;
-                            //for($i = 1;$i <= $fc;$i++){
                                 RCCWP_WritePostPage::CustomFieldInterface($field->id,$groupCounter,$element,$customGroup->id); 
                             }   
                         }else{
@@ -693,9 +682,11 @@ class RCCWP_WritePostPage {
         	    			$customField = RCCWP_CustomField::Get($field->id);
 		            		$customFieldName = RC_Format::GetInputName(attribute_escape($field->name));
         			    	$customFieldTitle = attribute_escape($customField->description);
-		        		    $inputName = $field->id."_".$groupCounter."_1_".$customFieldName;
+                            $groupId = $customGroup->id;
+		        		    $inputName = $field->id."_".$groupCounter."_1_".$groupId."_".$customFieldName;
     			    
                             RCCWP_WritePostPage::CustomFieldInterface($field->id,$groupCounter,1,$customGroup->id);
+                            $fc = 1;
 		    	        }
 			        ?>	
 			        <tr style="display:none" id="<?php echo "c".$inputName."Duplicate"?>">
