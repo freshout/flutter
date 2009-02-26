@@ -83,7 +83,7 @@ class RCCWP_SWFUpload
     
                                         //custom settings
                                         custom_settings :{
-                                            'file_id' : "<?php echo $inputName;?>",
+                                            'file_id' : "<?php echo $inputName;?>"
                                         },
                                             
                                         //handlers

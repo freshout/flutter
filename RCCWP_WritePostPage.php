@@ -599,6 +599,7 @@ class RCCWP_WritePostPage {
                         $groupId  = $customGroup->id;
 		        		$inputName = $field->id."_".$groupCounter."_1_".$groupId."_".$customFieldName;
 
+                        
                         if(isset($_REQUEST['post'])){
                             $fc = RCCWP_CustomField::GetFieldDuplicates($_REQUEST['post'],$field->name,$groupCounter);
                             $fields_order =  RCCWP_CustomField::GetFieldsOrder($_REQUEST['post'],$field->name);

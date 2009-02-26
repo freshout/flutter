@@ -50,7 +50,7 @@ jQuery(document).ready(function(){
     }); 
 
     //duplicate field
-    jQuery(".typeHandler").click(function(){
+    jQuery(".typeHandler").livequery("click",function(event){
         inputName = jQuery(this).attr("id").split("-")[1];
         customFieldId =  inputName.split("_")[0];
         groupCounter = inputName.split("_")[1];
