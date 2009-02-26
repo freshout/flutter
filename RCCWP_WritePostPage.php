@@ -961,7 +961,9 @@ class RCCWP_WritePostPage {
 		if (isset($_REQUEST['post']))
 		{
 			$customFieldId = $customField->id;
-			$value = attribute_escape(RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter));
+			$value = RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter);
+			$value = apply_filters('the_editor_content', $value);
+
 		}else{
 			$value = $customField->value;
 		}
