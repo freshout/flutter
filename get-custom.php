@@ -172,6 +172,82 @@ function get_image ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 		$fieldValue = $fieldValues[0];
 	else 
 		return "";
+	$url_params= explode("&",$fieldValue,2);
+	
+	if(count($url_params) >= 2){
+		$fieldObject->properties['params'] .="&". $url_params[1];
+		$fieldValue= $url_params[0];
+	}
+	
+	if (substr($fieldObject->properties['params'], 0, 1) == "?"){
+			$fieldObject->properties['params'] = substr($fieldObject->properties['params'], 1);
+		}
+	
+	//check if exist params, if not exist params, return original image
+	if (empty($fieldObject->properties['params']) && (FALSE == strstr($fieldValue, "&"))){
+		$fieldValue = FLUTTER_URI_RELATIVE.'files_flutter/'.$fieldValue; 
+	}else{
+		//check if exist thumb image, if exist return thumb image
+		$md5_params = md5($fieldObject->properties['params']);
+		if (file_exists(FLUTTER_URI_RELATIVE.'/files_flutter/th_'.$md5_params."_".$fieldValue)) {
+			$fieldValue = FLUTTER_URI_RELATIVE.'files_flutter/th_'.$md5_params."_".$fieldValue;
+		}else{
+			//generate thumb
+			include_once(FLUTTER_URI_RELATIVE.'thirdparty/phpthumb/phpthumb.class.php');
+			$phpThumb = new phpThumb();
+			$phpThumb->setSourceFilename(FLUTTER_URI_RELATIVE.'/files_flutter/'.$fieldValue);
+			$output_filename = FLUTTER_URI_RELATIVE.'files_flutter/th_'.$md5_params."_".$fieldValue;
+			 
+			$params_image = explode("&",$fieldObject->properties['params']);
+			foreach($params_image as $param){
+				if($param){
+					$p_image=explode("=",$param); 
+					$phpThumb->setParameter($p_image[0], $p_image[1]);
+				}
+			}
+			if ($phpThumb->GenerateThumbnail()) {
+				if ($phpThumb->RenderToFile($output_filename)) {
+					$fieldValue = $output_filename;
+				}
+			}
+		}
+	}
+	
+	if($tag_img){
+		$cssClass = $wpdb->get_results("SELECT CSS FROM ".RC_CWP_TABLE_GROUP_FIELDS." WHERE name='".$fieldName."'");
+		if (empty($cssClass[0]->CSS)){
+			$finalString = stripslashes(trim("\<img src=\'".$fieldValue."\' /\>"));
+		}else{
+			$finalString = stripslashes(trim("\<img src=\'".$fieldValue."\' class=\"".$cssClass[0]->CSS."\" \/\>"));
+		}
+	}else{
+		$finalString=$fieldValue;
+	}
+	return $finalString;
+}
+
+// Get Image function old version. 
+function get_image_old ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
+	require_once("RCCWP_CustomField.php");
+	global $wpdb, $post, $FIELD_TYPES;
+	
+	$fieldID = RCCWP_CustomField::GetIDByName($fieldName);
+	$fieldObject = GetFieldInfo($fieldID);
+	$fieldType = $wpdb->get_var("SELECT type FROM ".RC_CWP_TABLE_GROUP_FIELDS." WHERE id='".$fieldID."'");
+	$single = true;
+	switch($fieldType){
+		case $FIELD_TYPES["checkbox_list"]:
+		case $FIELD_TYPES["listbox"]:
+			$single = false;
+			break;
+	} 
+	
+	$fieldValues = (array) RCCWP_CustomField::GetCustomFieldValues($single, $post->ID, $fieldName, $groupIndex, $fieldIndex);
+	 
+	if(!empty($fieldValues[0]))
+		$fieldValue = $fieldValues[0];
+	else 
+		return "";
 	
     
 	if (substr($fieldObject->properties['params'], 0, 1) == "?"){
