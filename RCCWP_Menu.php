@@ -576,16 +576,46 @@ class RCCWP_Menu
 	
 	function DetachWpWritePanelMenuItems()
 	{
-		require_once ('RCCWP_Options.php');
+		
+		
+		global $menu;
 		global $submenu;
+		global $wp_version;
 
+		require_once ('RCCWP_Options.php');
+		
 		$options = RCCWP_Options::Get();
 		
-		if ($options['hide-write-post'] == '1')
-			unset($submenu['post-new.php'][5]);
+		if($wp_version < 2.7){
+			if ($options['hide-write-post'] == '1'){
+				unset($submenu['post-new.php'][5]);
+				unset($submenu['edit.php'][5]);
+			}
 		
-		if ($options['hide-write-page'] == '1')
-			unset($submenu['post-new.php'][10]);	
+			if ($options['hide-write-page'] == '1'){
+				unset($submenu['post-new.php'][10]);
+				unset($submenu['edit.php'][10]);
+			}
+		
+		}
+		
+		if($wp_version >= 2.7){
+			if ($options['hide-write-post'] == '1'){
+				foreach ($menu as $k => $v){
+					if ($v[2] == "edit.php"){
+						unset($menu[$k]);
+					}
+				}
+			}
+	
+			if ($options['hide-write-page'] == '1'){
+				foreach ($menu as $k => $v){
+					if ($v[2] == "edit-pages.php"){
+						unset($menu[$k]);
+					}
+				}
+			}
+		}
 	}
 	
 	function SetCurrentCustomWritePanelMenuItem()
