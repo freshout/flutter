@@ -10,14 +10,14 @@ class RCCWP_CreateCustomFieldPage
   	
   		<div class="wrap">
 	  	
-  		<h2><?=_e("Create Custom Field", $flutter_domain) ?></h2>
+  		<h2><?php _e("Create Custom Field", $flutter_domain); ?></h2>
   		<br class="clear" />
   		<?php
 		if (isset($_GET['err_msg'])) :
 			switch ($_GET['err_msg']){
 				case -1:
 				?>
-				<div class="error"><p> <?=__('A field with the same name already exists in this write panel. Please choose a different name.',$flutter_domain)?></p></div>
+				<div class="error"><p> <?php _e('A field with the same name already exists in this write panel. Please choose a different name.',$flutter_domain);?></p></div>
 				<?php
 				}
 		endif;
@@ -36,58 +36,58 @@ class RCCWP_CreateCustomFieldPage
 		<table class="form-table" width="100%" border="0" cellspacing="0" cellpadding="6">
 		<tbody>
 		<tr valign="top">
-			<th scope="row"><?=_e("Name", $flutter_domain) ?>:</th> 
+			<th scope="row"><?php _e("Name", $flutter_domain); ?>:</th> 
 			<td>  
 				<input name="custom-field-name" id="custom-field-name" size="40" type="text"  onkeyup="ajax_showOptions(this,'getFieldsByLetters',event)"/>
 				<input type="hidden" id="custom-field-name_hidden" name="custom-field-name_hidden" onchange="copyField();">
 				<p>
-					<?=__('Type a unique name for the field, the name must be unique among all fields 
+					<?php _e('Type a unique name for the field, the name must be unique among all fields 
 					in this panel. The name of the field is the key by which you can retrieve 
-					the field value later.',$flutter_domain)?>
+					the field value later.',$flutter_domain);?>
 					
 				</p>
 				<p>
-					<?=__('As you type the name, Flutter will display fields from other
+					<?php _e('As you type the name, Flutter will display fields from other
 					panels that are similar to the name you typed. If you selected one of them,
-					Flutter will create a field similar to the chosen one.',$flutter_domain)?>
+					Flutter will create a field similar to the chosen one.',$flutter_domain);?>
 				</p>
 			</td>
 		</tr>
 
 		<tr valign="top">
-			<th scope="row"><?=_e("Label", $flutter_domain) ?>:</th>
+			<th scope="row"><?php _e("Label", $flutter_domain); ?>:</th>
 			<td>
 				<input name="custom-field-description" id="custom-field-description" size="40" type="text" />
 				<p>
-					<?=__('Type a label for the field. The label of the field is displayed
-					beside the field in Write Panel page.',$flutter_domain)?>
+					<?php _e('Type a label for the field. The label of the field is displayed
+					beside the field in Write Panel page.',$flutter_domain); ?>
 				</p>
 			</td>
 		</tr>
 
 		<tr valign="top">
-			<th scope="row"><?=_e("Can be duplicated", $flutter_domain) ?>:</th>
+			<th scope="row"><?php _e("Can be duplicated", $flutter_domain); ?>:</th>
 			<td><input name="custom-field-duplicate" id="custom-field-duplicate" type="checkbox" value="1" <?php echo $custom_field->duplicate==1 ? "checked":"" ?>/></td>
 		</tr>
 
 		<tr valign="top">
-			<th scope="row"><?=_e("Order", $flutter_domain) ?>:</th>
+			<th scope="row"><?php _e("Order", $flutter_domain); ?>:</th>
 			<td><input type="text" name="custom-field-order" id="custom-field-order" size="2" value="0" /></td>
 		</tr>
 		
 
 		<tr valign="top">
-			<th scope="row"><?=_e("Required", $flutter_domain) ?>:</th>
+			<th scope="row"><?php _e("Required", $flutter_domain); ?>:</th>
 			<td>
 				<select name="custom-field-required" id="custom-field-required">
-					<option value="0" selected="selected"><?=__('Not Required - can be empty',$flutter_domain)?></option>
-					<option value="1"><?=__('Required - can not be empty',$flutter_domain)?></option>
+					<option value="0" selected="selected"><?php _e('Not Required - can be empty',$flutter_domain); ?></option>
+					<option value="1"><?php _e('Required - can not be empty',$flutter_domain); ?></option>
 				</select>
 			</td>
 		</tr>
 				
 		<tr valign="top">
-			<th scope="row"><?=_e("Type", $flutter_domain) ?>:</th>
+			<th scope="row"><?php _e("Type", $flutter_domain); ?>:</th>
 			<td>
 
 				<!-- START :: Javascript for Image/Photo' Css Class and for check -->
@@ -110,7 +110,7 @@ class RCCWP_CreateCustomFieldPage
 					function checkEmpty()
 					{
 						if (submitForm && (document.getElementById('custom-field-name').value == "" || document.getElementById('custom-field-description').value == "")){
-							alert("<?=__('Please fill in the name and the label of the field',$flutter_domain)?>");	
+							alert("<?php _e('Please fill in the name and the label of the field',$flutter_domain); ?>");	
 							return false;
 						}
 						return true;
@@ -135,7 +135,7 @@ class RCCWP_CreateCustomFieldPage
 		</tr>
 		<!-- START :: For Image/Photo' Css -->
 		<tr valign="top">
-			<th scope="row"><div id="divLbl" style="display:none"><?=__('Css Class',$flutter_domain)?>:</div></th>
+			<th scope="row"><div id="divLbl" style="display:none"><?php _e('Css Class',$flutter_domain);?>:</div></th>
 			<td>
 				<div id="divCSS" style="display:none">
 				<input name="custom-field-css" id="custom-field-css" size="40" type="text" value="freshout" />
@@ -149,7 +149,7 @@ class RCCWP_CreateCustomFieldPage
 		
 	  	<p class="submit" >
   			<a style="color:black" href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('cancel-create-custom-field')."&custom-group-id=$customGroupID"?>" class="button"><?php _e('Cancel',$flutter_domain); ?></a>
-  			<input type="submit" id="continue-create-custom-field" value='<?=__("Continue",$flutter_domain)?>'  onclick="submitForm=true;"/>
+  			<input type="submit" id="continue-create-custom-field" value='<?php _e("Continue",$flutter_domain); ?>'  onclick="submitForm=true;"/>
   		</p>
 	  	
   		</form>
@@ -168,7 +168,7 @@ class RCCWP_CreateCustomFieldPage
 		
 		<div class="wrap">
 		
-		<h2><?=_e("Create Custom Field", $flutter_domain)?></h2>
+		<h2><?php _e("Create Custom Field", $flutter_domain);?></h2>
 		
 		<form action="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('finish-create-custom-field')?>" method="post" id="continue-create-new-field-form">
 		
@@ -200,7 +200,7 @@ class RCCWP_CreateCustomFieldPage
 				$size = 3;
 		?>
 		<tr valign="top">
-			<th scope="row"><?=_e('Size', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Size', $flutter_domain); ?>:</th>
 			<td><input type="text" name="custom-field-size" id="custom-field-size" size="2" value="<?php echo $size?>" /></td>
 		</tr>	
 		<?php endif; ?>
@@ -211,11 +211,11 @@ class RCCWP_CreateCustomFieldPage
 			$width = 23;
 		?>
 		<tr valign="top">
-			<th scope="row"><?=_e('Height', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Height', $flutter_domain); ?>:</th>
 			<td><input type="text" name="custom-field-height" id="custom-field-height" size="2" value="<?php echo $height?>" /></td>
 		</tr>	
 		<tr valign="top">
-			<th scope="row"><?=_e('Width', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Width', $flutter_domain); ?>:</th>
 			<td><input type="text" name="custom-field-width" id="custom-field-width" size="2" value="<?php echo $width?>" /></td>
 		</tr>	
 		<?php endif; ?>
@@ -227,15 +227,15 @@ class RCCWP_CreateCustomFieldPage
 			$step = 1;
 		?>
 		<tr valign="top">
-			<th scope="row"><?=_e('Value min', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Value min', $flutter_domain); ?>:</th>
 			<td><input type="text" name="custom-field-slider-min" id="custom-field-slider-min" size="2" value="<?php echo $min_val?>" /></td>
 		</tr>
 		<tr valign="top">
-			<th scope="row"><?=_e('Value max', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Value max', $flutter_domain);?>:</th>
 			<td><input type="text" name="custom-field-slider-max" id="custom-field-slider-max" size="2" value="<?php echo $max_val?>" /></td>
 		</tr>		
 		<tr valign="top">
-			<th scope="row"><?=_e('Stepping', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Stepping', $flutter_domain);?>:</th>
 			<td><input type="text" name="custom-field-slider-step" id="custom-field-slider-step" size="2" value="<?php echo $step?>" /></td>
 		</tr>
 		<?php endif; ?>
@@ -248,20 +248,20 @@ class RCCWP_CreateCustomFieldPage
 		if ($current_field->has_options == "true") :
 		?>		
 		<tr valign="top">
-			<th scope="row"><?=_e('Options', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Options', $flutter_domain);?>:</th>
 			<td>
 				<textarea name="custom-field-options" id="custom-field-options" rows="2" cols="38"></textarea><br />
-				<em><?=_e('Separate each option with a newline.', $flutter_domain)?></em>
+				<em><?php _e('Separate each option with a newline.', $flutter_domain);?></em>
 			</td>
 		</tr>	
 		<tr valign="top">
-			<th scope="row"><?=_e('Default Value', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Default Value', $flutter_domain);?>:</th>
 			<td>
 				<?php
 				if ($current_field->allow_multiple_values == "true") :
 				?>
 				<textarea name="custom-field-default-value" id="custom-field-default-value" rows="2" cols="38"></textarea><br />
-				<em><?=_e('Separate each value with a newline.', $flutter_domain)?></em>
+				<em><?php _e('Separate each value with a newline.', $flutter_domain);?></em>
 				<?php
 				else :
 				?>				
@@ -276,15 +276,15 @@ class RCCWP_CreateCustomFieldPage
 
 		<?php if( $current_field->has_properties && $current_field->name == 'Image' ) : ?>
 		<tr valign="top">
-			<th scope="row"><?=_e('Options', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Options', $flutter_domain);?>:</th>
 			<td>
-				<?=_e('Max Height', $flutter_domain)?>: <input type="text" name="custom-field-photo-height" id="custom-field-photo-height"/>
-				<?=_e('Max Width', $flutter_domain)?>: <input type="text" name="custom-field-photo-width" id="custom-field-photo-width" />
-				<?=_e('Custom', $flutter_domain)?>: <input type="text" name="custom-field-custom-params" id="custom-field-custom-params" />
+				<?php _e('Max Height', $flutter_domain);?>: <input type="text" name="custom-field-photo-height" id="custom-field-photo-height"/>
+				<?php _e('Max Width', $flutter_domain);?>: <input type="text" name="custom-field-photo-width" id="custom-field-photo-width" />
+				<?php _e('Custom', $flutter_domain);?>: <input type="text" name="custom-field-custom-params" id="custom-field-custom-params" />
 				<div style="color:blue;text-decoration:underline;"
 					onclick="div=document.getElementById('params');div.style.display='';"
 					>
-					<?=_e('Custom Options List', $flutter_domain)?>
+					<?php _e('Custom Options List', $flutter_domain);?>
 				</div>
 				<div id="params"
 					style="display:none;"
@@ -298,9 +298,9 @@ class RCCWP_CreateCustomFieldPage
 		<!-- Date Custom Field -->
 		<?php if( $current_field->has_properties && $current_field->name == 'Date' ) : ?>
 		<tr valign="top">
-			<th scope="row"><?=_e('Options', $flutter_domain)?>:</th>
+			<th scope="row"><?php _e('Options', $flutter_domain);?>:</th>
 			<td>
-			<?=_e('Format', $flutter_domain)?>:	<select name="custom-field-date-format" id="custom-field-date-format">
+			<?php _e('Format', $flutter_domain);?>:	<select name="custom-field-date-format" id="custom-field-date-format">
 					<option value="m/d/Y">4/20/2008</option>
 					<option value="l, F d, Y">Sunday, April 20, 2008</option>
 					<option value="F d, Y">April 20, 2008</option>
@@ -320,7 +320,7 @@ class RCCWP_CreateCustomFieldPage
 		
 		<p class="submit" >
 			<a style="color:black" href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('cancel-create-custom-field')."&custom-group-id=$customGroupID"?>" class="button"><?php _e('Cancel', $flutter_domain); ?></a> 
-			<input type="submit" id="finish-create-custom-field" value="<?=_e('Finish', $flutter_domain)?>" />
+			<input type="submit" id="finish-create-custom-field" value="<?php _e('Finish', $flutter_domain); ?>" />
 		</p>
 			
 		</form>
