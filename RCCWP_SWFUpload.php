@@ -51,7 +51,7 @@ class RCCWP_SWFUpload
 				?>
 
 				<tr style="background:transparent">
-					<td style="border-bottom-width: 0px;padding: 0"><label for="upload_url" ><?php _e('Or URL', $flutter_domain); ?>:</label></td>
+					<td style="border-bottom-width: 0px;padding: 0; padding-bottom:32px;"><label for="upload_url" ><?php _e('Or URL', $flutter_domain); ?>:</label></td>
 					<td style="border-bottom-width: 0px">
 						<input id="upload_url_<?php echo $inputName ?>"
 							name="upload_url_<?php echo $inputName ?>"
