@@ -32,7 +32,8 @@ class Debug{
      }
 }
 
-function pr($data){
+//wrapper for print_r with tag pre
+function f_pr($data){
     echo "<pre>";
     print_r($data);
     echo "</pre>";

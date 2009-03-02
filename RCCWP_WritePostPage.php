@@ -434,6 +434,7 @@ class RCCWP_WritePostPage {
 			else{$name_title = "Page";}
 			$title="Edit ".$name_title." >> " .$blu->name;
 		}
+
 		
 		// Show/Hide Panel fields
 	 
@@ -967,17 +968,88 @@ class RCCWP_WritePostPage {
 		?>
 		<?php
 		
-		$hide_visual_editor = RCCWP_Options::Get('hide-visual-editor');
+		
+		
+		$wp_default_editor = wp_default_editor(); pr($wp_default_editor);
+		if ( 'html' == $wp_default_editor ) { ?>
+		    <script type="text/javascript">
+			Event.observe(window, 'load', function() {		    
+			    tinyMCE.execCommand('mceAddControl', true, "content");
+			    switchEditors.go('content', 'html');
+			});
+		    </script>
+	    <?php	} 
+		
+		
+		$hide_visual_editor = RCCWP_Options::Get('hide-visgo ual-editor');
 		if ($hide_visual_editor == '' || $hide_visual_editor == 0){
 		?>
 		<script type="text/javascript">
-			//Event.observe(window, 'load', function() {
+			Event.observe(window, 'load', function() {
+			    tinyMCE.execCommand('mceAddControl', true, "<?php echo $inputName?>");
+			});
+
+			function add_editor(id){
+			    tinyMCE.execCommand('mceAddControl', false, id);
+			}
 			
-				tinyMCE.execCommand('mceAddControl', false, "<?php echo $inputName?>");
-			//});
+			function del_editor(id){
+			    tinyMCE.execCommand('mceRemoveControl', false, id);
+			}
+			
 			</script>
 		<?php } ?>
+		<style>
+		.tab_multi_flutter {
+		    padding-bottom:30px;
+		    display: block;
+		    margin-right:10px;
+		}
+		.edButtonHTML_flutter {
+		    background-color:#F1F1F1;
+		    border-color:#DFDFDF;
+		    color:#999999;
+		    margin-right:15px;
+		    border-style:solid;
+		    border-style:solid;
+border-width:1px;
+cursor:pointer;
+display:block;
+float:right;
+height:18px;
+margin:5px 5px 0 0;
+padding:4px 5px 2px;
+
+		}
+		
+		.edButtonPreview_flutter {
+		    background-color:#F1F1F1;
+		    border-color:#DFDFDF;
+		    color:#999999;
+		    margin-right:15px;
+		    border-style:solid;
+		    border-style:solid;
+border-width:1px;
+cursor:pointer;
+display:block;
+float:right;
+height:18px;
+margin:5px 5px 0 0;
+padding:4px 5px 2px;
+
+		}
+		
+		</style>
+		<div class="tab_multi_flutter">
+		    <a onclick="del_editor('<?php echo $inputName?>');" class="edButtonHTML_flutter">HTML</a>		
+		    <a onclick="add_editor('<?php echo $inputName?>');" class="edButtonHTML_flutter" >Visual</a>
+		</div>
+		
+		
+		<div class="mul_flutter">
 		<textarea  class="<?php echo $requiredClass;?>" tabindex="3"  id="<?php echo $inputName?>" name="<?php echo $inputName?>" rows="<?php echo $inputHeight?>" cols="<?php echo $inputWidth?>"><?php echo $value?></textarea>
+		</div>
+		
 	<?php
 	}
 	
