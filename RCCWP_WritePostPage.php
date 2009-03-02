@@ -970,7 +970,7 @@ class RCCWP_WritePostPage {
 		
 		
 		
-		$wp_default_editor = wp_default_editor(); pr($wp_default_editor);
+		$wp_default_editor = wp_default_editor();
 		if ( 'html' == $wp_default_editor ) { ?>
 		    <script type="text/javascript">
 			Event.observe(window, 'load', function() {		    
