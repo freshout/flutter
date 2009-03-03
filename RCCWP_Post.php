@@ -173,6 +173,11 @@ class RCCWP_Post {
                    
     				// Add field value meta data
 					add_post_meta($postId, $customFieldName, $finalValue);
+					
+					// make sure meta is added to the post, not a revision
+					if ( $the_post = wp_is_post_revision($postId) )
+						$postId = $the_post;
+					
 					$fieldMetaID = $wpdb->insert_id;
 
 					// Add field extended properties
