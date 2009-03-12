@@ -1025,6 +1025,7 @@ class phpthumb {
 					$AbsoluteFilename = $filename;
 					$this->DebugMessage('ResolveFilenameToAbsolute() NOT prepending $this->config_document_root ('.$this->config_document_root.') to $filename ('.$filename.') resulting in ($AbsoluteFilename = "'.$AbsoluteFilename.'")', __FILE__, __LINE__);
 				} else {
+
 					$AbsoluteFilename = $this->config_document_root.$filename;
 					$this->DebugMessage('ResolveFilenameToAbsolute() prepending $this->config_document_root ('.$this->config_document_root.') to $filename ('.$filename.') resulting in ($AbsoluteFilename = "'.$AbsoluteFilename.'")', __FILE__, __LINE__);
 				}
@@ -1032,9 +1033,13 @@ class phpthumb {
 			}
 
 		} else {
-
 			// relative to current directory (any OS)
-			$AbsoluteFilename = $this->config_document_root.dirname(@$_SERVER['PHP_SELF']).DIRECTORY_SEPARATOR.$filename;
+            if(preg_match("/.*\~.*/",$filename)){
+                $AbsoluteFilename = $this->config_document_root.DIRECTORY_SEPARATOR.$filename;
+            }else{
+			    $AbsoluteFilename = $this->config_document_root.dirname(@$_SERVER['PHP_SELF']).DIRECTORY_SEPARATOR.$filename;
+            }
+
 			//if (!@file_exists($AbsoluteFilename) && @file_exists(realpath($this->DotPadRelativeDirectoryPath($filename)))) {
 			//	$AbsoluteFilename = realpath($this->DotPadRelativeDirectoryPath($filename));
 			//}
@@ -1068,7 +1073,7 @@ class phpthumb {
 		}
 		if (!$this->config_allow_src_above_docroot && !ereg('^'.preg_quote(str_replace(DIRECTORY_SEPARATOR, '/', realpath($this->config_document_root))), $AbsoluteFilename)) {
 			$this->DebugMessage('!$this->config_allow_src_above_docroot therefore setting "'.$AbsoluteFilename.'" (outside "'.realpath($this->config_document_root).'") to null', __FILE__, __LINE__);
-			return false;
+			//return false;
 		}
 		if (!$this->config_allow_src_above_phpthumb && !ereg('^'.preg_quote(str_replace(DIRECTORY_SEPARATOR, '/', dirname(__FILE__))), $AbsoluteFilename)) {
 			$this->DebugMessage('!$this->config_allow_src_above_phpthumb therefore setting "'.$AbsoluteFilename.'" (outside "'.dirname(__FILE__).'") to null', __FILE__, __LINE__);
