@@ -527,7 +527,7 @@ class RCCWP_CustomWritePanel
 		}
 		
 		//Create write panel
-		$writePanelID = RCCWP_CustomWritePanel::Create($writePanelName, $imported_data['panel']->description, $imported_data['panel']->standardFieldsIDs, $assignedCategories,$imported_data['panel']->display_order, $imported_data['panel']->type, false);
+		$writePanelID = RCCWP_CustomWritePanel::Create($writePanelName, $imported_data['panel']->description, $imported_data['panel']->standardFieldsIDs, $assignedCategories,$imported_data['panel']->display_order, $imported_data['panel']->type, false,$imported_data['panel']->single,$imported_data['panel']->theme);
 		
 		foreach($imported_data['fields'] as $groupName => $group){
 			// For backward compatability
@@ -567,7 +567,9 @@ class RCCWP_CustomWritePanel
 
 		$writePanel = RCCWP_CustomWritePanel::Get($panelID);
 		$writePanel->standardFieldsIDs = RCCWP_CustomWritePanel::GetStandardFields($panelID);
-		$writePanel->assignedCategories = array(); 
+		$writePanel->assignedCategories = array();
+		$writePanel->theme = RCCWP_CustomWritePanel::GetThemePage($writePanel->name);
+				
 		$assignedCategories = RCCWP_CustomWritePanel::GetAssignedCategories($panelID);
 		foreach($assignedCategories as $assignedCategory){
 			$writePanel->assignedCategories[] = $assignedCategory->cat_name;
