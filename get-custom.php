@@ -154,7 +154,7 @@ function GetProcessedFieldValue($fieldValues, $fieldType, $fieldProperties=array
 function get_image ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 	require_once("RCCWP_CustomField.php");
 	global $wpdb, $post, $FIELD_TYPES;
-	
+
 	$fieldID = RCCWP_CustomField::GetIDByName($fieldName);
 	$fieldObject = GetFieldInfo($fieldID);
 	$fieldType = $wpdb->get_var("SELECT type FROM ".RC_CWP_TABLE_GROUP_FIELDS." WHERE id='".$fieldID."'");
@@ -185,12 +185,12 @@ function get_image ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 	
 	//check if exist params, if not exist params, return original image
 	if (empty($fieldObject->properties['params']) && (FALSE == strstr($fieldValue, "&"))){
-		$fieldValue = FLUTTER_URI_RELATIVE.'files_flutter/'.$fieldValue; 
+		$fieldValue = FLUTTER_URI.'files_flutter/'.$fieldValue; 
 	}else{
 		//check if exist thumb image, if exist return thumb image
 		$md5_params = md5($fieldObject->properties['params']);
 		if (file_exists(FLUTTER_URI_RELATIVE.'/files_flutter/th_'.$md5_params."_".$fieldValue)) {
-			$fieldValue = FLUTTER_URI_RELATIVE.'files_flutter/th_'.$md5_params."_".$fieldValue;
+			$fieldValue = FLUTTER_URI.'files_flutter/th_'.$md5_params."_".$fieldValue;
 		}else{
 			//generate thumb
 			include_once(FLUTTER_URI_RELATIVE.'thirdparty/phpthumb/phpthumb.class.php');
@@ -207,7 +207,7 @@ function get_image ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 			}
 			if ($phpThumb->GenerateThumbnail()) {
 				if ($phpThumb->RenderToFile($output_filename)) {
-					$fieldValue = $output_filename;
+					$fieldValue = get_bloginfo('url')."/".$output_filename;
 				}
 			}
 		}
