@@ -183,31 +183,34 @@ function get_image ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 			$fieldObject->properties['params'] = substr($fieldObject->properties['params'], 1);
 		}
 	
-	//check if exist params, if not exist params, return original image
+	 //check if exist params, if not exist params, return original image
 	if (empty($fieldObject->properties['params']) && (FALSE == strstr($fieldValue, "&"))){
-		$fieldValue = FLUTTER_URI.'files_flutter/'.$fieldValue; 
+		$fieldValue = get_bloginfo('wpurl').'/'.FLUTTER_URI_RELATIVE.'files_flutter/'.$fieldValue;
 	}else{
 		//check if exist thumb image, if exist return thumb image
 		$md5_params = md5($fieldObject->properties['params']);
-		if (file_exists(FLUTTER_URI_RELATIVE.'/files_flutter/th_'.$md5_params."_".$fieldValue)) {
-			$fieldValue = FLUTTER_URI.'files_flutter/th_'.$md5_params."_".$fieldValue;
+		if (file_exists(dirname(__FILE__).'/files_flutter/th_'.$md5_params."_".$fieldValue)) {
+			$fieldValue = get_bloginfo('wpurl').'/'.FLUTTER_URI_RELATIVE.'files_flutter/th_'.$md5_params."_".$fieldValue;
 		}else{
 			//generate thumb
-			include_once(FLUTTER_URI_RELATIVE.'thirdparty/phpthumb/phpthumb.class.php');
+			//include_once(FLUTTER_URI_RELATIVE.'thirdparty/phpthumb/phpthumb.class.php');
+			include_once(dirname(__FILE__)."/thirdparty/phpthumb/phpthumb.class.php");
 			$phpThumb = new phpThumb();
-			$phpThumb->setSourceFilename(FLUTTER_URI_RELATIVE.'/files_flutter/'.$fieldValue);
-			$output_filename = FLUTTER_URI_RELATIVE.'files_flutter/th_'.$md5_params."_".$fieldValue;
-			 
+			$phpThumb->setSourceFilename(dirname(__FILE__).'/files_flutter/'.$fieldValue);
+			$create_md5_filename = 'th_'.$md5_params."_".$fieldValue;
+			$output_filename = dirname(__FILE__).'/files_flutter/'.$create_md5_filename;
+			$final_filename = get_bloginfo('wpurl').'/'.FLUTTER_URI_RELATIVE.'files_flutter/'.$create_md5_filename;
+
 			$params_image = explode("&",$fieldObject->properties['params']);
 			foreach($params_image as $param){
 				if($param){
-					$p_image=explode("=",$param); 
+					$p_image=explode("=",$param);
 					$phpThumb->setParameter($p_image[0], $p_image[1]);
 				}
 			}
 			if ($phpThumb->GenerateThumbnail()) {
 				if ($phpThumb->RenderToFile($output_filename)) {
-					$fieldValue = get_bloginfo('url')."/".$output_filename;
+					$fieldValue = $final_filename;
 				}
 			}
 		}
