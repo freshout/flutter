@@ -981,7 +981,7 @@ class RCCWP_WritePostPage {
 	    <?php	} 
 		
 		
-		$hide_visual_editor = RCCWP_Options::Get('hide-visgo ual-editor');
+		$hide_visual_editor = RCCWP_Options::Get('hide-visual-editor');
 		if ($hide_visual_editor == '' || $hide_visual_editor == 0){
 		?>
 		<script type="text/javascript">
@@ -1040,11 +1040,12 @@ padding:4px 5px 2px;
 		}
 		
 		</style>
+		<?php if ($hide_visual_editor == '' || $hide_visual_editor == 0){ ?>
 		<div class="tab_multi_flutter">
 		    <a onclick="del_editor('<?php echo $inputName?>');" class="edButtonHTML_flutter">HTML</a>		
 		    <a onclick="add_editor('<?php echo $inputName?>');" class="edButtonHTML_flutter" >Visual</a>
 		</div>
-		
+		<?php } ?>
 		
 		<div class="mul_flutter">
 		<textarea  class="<?php echo $requiredClass;?>" tabindex="3"  id="<?php echo $inputName?>" name="<?php echo $inputName?>" rows="<?php echo $inputHeight?>" cols="<?php echo $inputWidth?>"><?php echo $value?></textarea>
