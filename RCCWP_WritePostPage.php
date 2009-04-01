@@ -14,8 +14,8 @@ class RCCWP_WritePostPage {
 		//hide all categories
 		$all = get_categories( "get=all" );
 		foreach($all as $al){
-			$toReplace = 'class="selectit"><input value="'.$al->term_id.'" type="checkbox" name="post_category[]" id="in-category-'.$al->term_id.'"';
-			$replacement = 'class="selectit" style="display:none;"><input value="'.$al->term_id.'" type="checkbox" name="post_category[]" id="in-category-'.$al->term_id.'"';
+			$toReplace = 'class="selectit"><input value="'.$al->term_id.'" type="checkbox" name="post_category[]" id="in-category-'.$al->term_id.'"/>';
+			$replacement = 'class="selectit" style="display:none;"><input value="'.$al->term_id.'" type="checkbox" name="post_category[]" id="in-category-'.$al->term_id.'"/>';
 			$content = str_replace($toReplace, $replacement, $content);
 		} 
 		//display ony categories and child
@@ -29,21 +29,23 @@ class RCCWP_WritePostPage {
 			}
 		}
 		$dos=array_unique($dos);
-		foreach($dos as $do){
+		
+		
+		
+		    foreach($dos as $do){
 			$toReplace = 'class="selectit" style="display:none;"><input value="'.$do.'" type="checkbox" name="post_category[]" id="in-category-'.$do.'"';
 			$replacement = 'class="selectit"><input value="'.$do.'" type="checkbox" name="post_category[]" id="in-category-'.$do.'"';
 			$content = str_replace($toReplace, $replacement, $content);
-		} 
+		    }
 		
-		
-        
-		foreach ($assignedCategoryIds as $categoryId)
-		{
+		if($_GET['custom-write-panel-id']){
+		    foreach ($assignedCategoryIds as $categoryId)
+		    {
 			$toReplace = 'id="in-category-' . $categoryId . '"';
 			$replacement = $toReplace . ' checked="checked"';
 			$content = str_replace($toReplace, $replacement, $content);
+		    }
 		}
-		
 		//set default theme page
 		if($post->ID == 0){
 			$toReplace = "value='".$customThemePage."'";
