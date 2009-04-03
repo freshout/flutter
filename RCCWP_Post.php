@@ -67,6 +67,10 @@ class RCCWP_Post {
 					delete_post_meta($postId, $customFieldName);	
 				}
 			}
+
+            if ( $the_post = wp_is_post_revision($postId) )
+			    $postId = $the_post;
+
 			$wpdb->query("DELETE FROM ". RC_CWP_TABLE_POST_META .
 				" WHERE post_id=$postId");
 

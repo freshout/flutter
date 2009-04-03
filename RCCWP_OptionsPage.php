@@ -185,7 +185,7 @@ function Main()
 		<td>
 			<label for="enable-browserupload">
 			<input name="enable-browserupload" id="enable-browserupload" value="1" <?php echo RCCWP_OptionsPage::GetCheckboxState($customWritePanelOptions['enable-browserupload']) ?> type="checkbox">
-			&nbsp; <?php _e('Use Browser uploader instea Flash Uploader', $flutter_domain); ?></label>
+			&nbsp; <?php _e('Use Browser uploader instead Flash Uploader', $flutter_domain); ?></label>
 		</td>
 	</tr>
 

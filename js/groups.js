@@ -2,6 +2,7 @@ jQuery(document).ready(function(){
 
     //sorteable
     jQuery(".write_panel_wrapper").sortable({
+        handle: ".sortable_flutter",
         stop : function(){
             id =  jQuery(this).attr("id").split("_")[3];
             kids =  jQuery("#write_panel_wrap_"+id).children().filter(".postbox1");
@@ -36,7 +37,6 @@ jQuery(document).ready(function(){
     jQuery(".delete_duplicate_button").livequery("click",function(event){
         id = jQuery(this).attr("id");
         div = id.split("-")[1];
-
         deleteGroupDuplicate(div);
 
         recount =  div.split("_")[2];

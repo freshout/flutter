@@ -575,8 +575,8 @@ class RCCWP_WritePostPage {
         }
 		?>
 		<div id="freshpostdiv_group_<?php echo $customGroup->id.'_'.$groupCounter;?>" class="postbox1">	
-            <div class="postbox">
-                <h3 class="hndle">
+            <div class="postbox" >
+                <h3 class="hndle sortable_flutter">
                     <span><?php echo $title;?> <?php echo $counter;?></span>
                 </h3>
             <div class="inside">
@@ -672,8 +672,8 @@ class RCCWP_WritePostPage {
 		
 		<div id="freshpostdiv_group_<?php echo $customGroup->id.'_'.$groupCounter;?>" class="postbox1">
         <div class="postbox">
-            <h3 onclick="jQuery(jQuery(this).parent().get(0)).toggleClass('closed');"> <a class="togbox">+</a>
-			    <?php echo  $customGroup->name." ($groupCounter)" ?> 
+            <h3 class="hndle sortable_flutter">
+			    <span><?php echo  $customGroup->name." ($groupCounter)" ?> </span>
 		    </h3>
 		    <div class="inside">
 			    <table class="form-table" style="width: 100%;" cellspacing="2" cellpadding="5">
