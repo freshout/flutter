@@ -341,7 +341,7 @@ class RCCWP_Processor
 					$CUSTOM_WRITE_PANEL = RCCWP_Post::GetCustomWritePanel();
 					
 					
-					if (isset($CUSTOM_WRITE_PANEL))
+					if (isset($CUSTOM_WRITE_PANEL) && $CUSTOM_WRITE_PANEL > 0)
 					{
 								
 						ob_start(array('RCCWP_WritePostPage', 'ApplyCustomWritePanelAssignedCategories'));
