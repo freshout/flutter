@@ -399,7 +399,7 @@ class RCCWP_Application
 		//Import Default modules 
 		if (RCCWP_Application::IsWordpressMu()){
 			if (get_site_option('FLUTTER_fist_time') == ''){
-				RCCWP_Application::import_default_modules();
+				//RCCWP_Application::import_default_modules();
 				update_site_option('FLUTTER_fist_time', '1');
 			}
 		}

@@ -301,8 +301,8 @@ class RCCWP_Menu
 		global $flutter_domain;
 		require_once ('RCCWP_OptionsPage.php');
 
-		//if ((!current_user_can(FLUTTER_CAPABILITY_PANELS) && !current_user_can(FLUTTER_CAPABILITY_MODULES)))
-		//	return;
+		if ((!current_user_can(FLUTTER_CAPABILITY_PANELS) && !current_user_can(FLUTTER_CAPABILITY_MODULES)))
+			return;
 
 		$panelsAndModulesFunctions = RCCWP_Menu::PrepareModulesPanelsMenuItems();
 
@@ -310,9 +310,9 @@ class RCCWP_Menu
 		add_menu_page(__('Flutter > Manage',$flutter_domain), __('Flutter',$flutter_domain), 10, __FILE__, $panelsAndModulesFunctions->panelsMenuFunction);
 
         // Add Flutter submenus
-		add_submenu_page(__FILE__, __('Write Panels',$flutter_domain), __('Write Panels',$flutter_domain), 10, __FILE__, $panelsAndModulesFunctions->panelsMenuFunction);
-		add_submenu_page(__FILE__, __('Modules',$flutter_domain), __('Modules',$flutter_domain), 10, 'FlutterManageModules', $panelsAndModulesFunctions->modulesMenuFunction);		
-		add_submenu_page(__FILE__, __('Template Options',$flutter_domain),__('Template Options',$flutter_domain),10,'RCCWP_ThemeSettingsPage',array('RCCWP_ThemeSettingsPage','show_layout_settings'));
+		add_submenu_page('admin.php', __('Write Panels',$flutter_domain), __('Write Panels',$flutter_domain), 10, __FILE__, $panelsAndModulesFunctions->panelsMenuFunction);
+		add_submenu_page('admin.php', __('Modules',$flutter_domain), __('Modules',$flutter_domain), 10, 'FlutterManageModules', $panelsAndModulesFunctions->modulesMenuFunction);		
+		add_submenu_page('admin.php', __('Template Options',$flutter_domain),__('Template Options',$flutter_domain),10,'RCCWP_ThemeSettingsPage',array('RCCWP_ThemeSettingsPage','show_layout_settings'));
      }
 
 	function AttachOptionsMenuItem()
@@ -393,6 +393,7 @@ class RCCWP_Menu
 		
 		
 			$new_menu = array();
+            ksort($menu);
 		
 			foreach ($menu as $k => $v) {
 				if($k > 5) break;
