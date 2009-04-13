@@ -3,3 +3,5 @@ modules/
 files_flutter/
 cache/
 *.log
+.svn/
+
