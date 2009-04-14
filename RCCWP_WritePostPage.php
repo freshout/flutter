@@ -306,6 +306,17 @@ class RCCWP_WritePostPage {
 				var stopPublish = false;
 				$$('input.field_required','textarea.field_required').each(
 						function(inputField){
+                            <?php  
+		                        $hide_visual_editor = RCCWP_Options::Get('hide-visual-editor');
+                                if ($hide_visual_editor == '' || $hide_visual_editor ==  0):
+                            ?>
+                                re = new RegExp(".*_multiline");
+                                if(re.match(inputField.id)){
+                                    inputField.value = tinyMCE.get(inputField.id).getContent();
+                                }
+
+                            <?php endif;?>
+
 							if ($F(inputField) == "" &&
 								!(Object.isElement($(inputField.id+"_last")) && $F(inputField.id+"_last") != "")	){
 								stopPublish = true;
@@ -1031,16 +1042,14 @@ padding:4px 5px 2px;
 		    margin-right:15px;
 		    border-style:solid;
 		    border-style:solid;
-border-width:1px;
-cursor:pointer;
-display:block;
-float:right;
-height:18px;
-margin:5px 5px 0 0;
-padding:4px 5px 2px;
-
+            border-width:1px;
+            cursor:pointer;
+            display:block;
+            float:right;
+            height:18px;
+            margin:5px 5px 0 0;
+            padding:4px 5px 2px;
 		}
-		
 		</style>
 		<?php if ($hide_visual_editor == '' || $hide_visual_editor == 0){ ?>
 		<div class="tab_multi_flutter">
