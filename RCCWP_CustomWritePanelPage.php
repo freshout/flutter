@@ -328,7 +328,7 @@ class RCCWP_CustomWritePanelPage
 		<script type="text/javascript" language="javascript">
 			function confirmBeforeDelete()
 			{
-				return confirm("<?php _e('Are you sure you want to delete this write panel?', $flutter_domain); ?>");							
+				return confirm("<?php _e('Are you sure you want to delete this custom Field?', $flutter_domain); ?>");
 			}
 		</script>
 		<div class="wrap">
@@ -379,7 +379,7 @@ class RCCWP_CustomWritePanelPage
 		  			<tr>
 		  				<td><strong><a style="color:#D54E21" href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('edit-custom-group')."&custom-group-id={$group->id}"?>"><?php echo $group->name?></a></strong>&nbsp;&nbsp;(<a style="font-size:very-small" href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('create-custom-field')."&custom-group-id={$group->id}"?>"><?php _e('create field',$flutter_domain); ?></a>) </td>
 		  				<td><?php _e('Group', $flutter_domain)?></td>
-		  				<td><a href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('delete-custom-group')."&custom-group-id={$group->id}"?>">X <?php _e('Delete',$flutter_domain); ?></a></td>
+		  				<td><a onclick="return confirmBeforeDelete();" href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('delete-custom-group')."&custom-group-id={$group->id}"?>">X <?php _e('Delete',$flutter_domain); ?></a></td>
 		  				
 		  			</tr>
 	  		<?php
@@ -404,7 +404,7 @@ class RCCWP_CustomWritePanelPage
 			<tr>
 				<td><a href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('edit-custom-field')."&custom-field-id=$field->id"?> " ><?php if ($intended){ ?><img align="top" src="<?php echo FLUTTER_URI; ?>images/arrow_right.gif" alt=""/> <?php } ?><?php echo $field->description?></a></td>
 		  		<td><?php echo $field->type?></td>
-		  		<td><a href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('delete-custom-field')."&custom-field-id=$field->id"?>" >X <?php _e('Delete',$flutter_domain); ?></a></td>
+		  		<td><a onclick="return confirmBeforeDelete();" href="<?php echo RCCWP_ManagementPage::GetCustomWritePanelGenericUrl('delete-custom-field')."&custom-field-id=$field->id"?>" >X <?php _e('Delete',$flutter_domain); ?></a></td>
 		  		
 			</tr>
 			
