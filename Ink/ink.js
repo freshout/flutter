@@ -34,11 +34,11 @@ function toggleForm(form) {
 }
 
 function toggleColorSwatch(element) {
-	if($F('activeField') != '') { $($F('activeField')).style.backgroundImage = 'url(JS_CANVASURI + "images/colorswatch.png")';
+	if($F('activeField') != '') { $($F('activeField')).style.backgroundImage = 'url(JS_FLUTTER_URI + "images/colorswatch.png")';
 		if($F($F('activeField')) == '') { $($F('activeField')).style.backgroundColor = ''; }
 	}
 	$('activeField').value = element;
-	$(element).style.backgroundImage = 'url(JS_CANVASURI + "images/colorswatch-active.png")';
+	$(element).style.backgroundImage = 'url(JS_FLUTTER_URI + "images/colorswatch-active.png")';
 	if($F($F('activeField')) != '') { setSliders($F($F('activeField'))); }
 		else { resetSliders(); }
 }
@@ -66,7 +66,7 @@ function saveInkVariables(element) {
 		var value = escape($F(element));
 		var string = element.split('__');
 		var pars = 'element='+string[0]+'&definition='+string[1]+'&value='+value;
-		var url = JS_CANVASURI + 'Ink/ink-ajax.php';
+		var url = JS_FLUTTER_URI + 'Ink/ink-ajax.php';
 		var myAjax = new Ajax.Request(url, 
 			{method: 'get', 
 			parameters: pars} 
@@ -114,7 +114,7 @@ function ink_hex2rgb(hex) {
 
 function updateInkOption(option, value) {
 	var pars = 'option='+option+'&value='+value;
-	var url = JS_CANVASURI + 'Ink/ink-ajax.php';
+	var url = JS_FLUTTER_URI + 'Ink/ink-ajax.php';
 	var myAjax = new Ajax.Request(url, 
 		{method: 'get', 
 		parameters: pars} 
@@ -124,7 +124,7 @@ function updateInkOption(option, value) {
 function restoreInk() {
 	if(window.confirm('Are you sure you restore default values? All changes will be lost.')) {
 		var pars = 'restore=true';
-		var url = JS_CANVASURI + 'Ink/ink-ajax.php';
+		var url = JS_FLUTTER_URI + 'Ink/ink-ajax.php';
 		var myAjax = new Ajax.Request(url, 
 			{method: 'get', 
 			parameters: pars,

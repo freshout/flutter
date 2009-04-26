@@ -128,7 +128,7 @@ if ($handle = @opendir($moduleTemplatesFolder)) {
 	$F = "\$F";	
 	$module_template_name_id = 'canvas_'.$zone.'_'.$position.'_'.$block_id.'_module_template_name';
 
-	$ListboxAJAX = CANVASURI. "ajax/canvas-populate-listbox.php?mod_name=".$module_name."&template_name=";
+	$ListboxAJAX = FLUTTER_URI. "ajax/canvas-populate-listbox.php?mod_name=".$module_name."&template_name=";
 
 	$content .= 
 <<<EOF
@@ -303,8 +303,8 @@ EOF;
         	$content .= '<label class="textbox">'.$variable->description.' <small>(Note &#124; is an illegal character)</small></label>'."\n".'<span class="list" id="listlist">'."\n";
         	foreach($listitems as $listitem) {
         		$content .= '<span id="'.$variable->variable_name.$counter.'"><input type="text" class="text" name="'.$counter.'canvaslist_'.$variable->variable_name.'" value="'.htmlspecialchars($listitem).'" />'."\n";
-				$content .= '<a href="javascript:void(0)" onclick="Canvas.addListItem(this, \''.$variable->variable_name.'\')"><img src="'.CANVASURI.'images/list-duplicate.png" alt="Duplicate" title="Duplicate item"/></a>';
-				$content .= '<a href="javascript:void(0)" onclick="Canvas.removeListItem(this)"><img src="'.CANVASURI.'images/list-delete.png" alt="Delete" title="Delete item"/></a>';
+				$content .= '<a href="javascript:void(0)" onclick="Canvas.addListItem(this, \''.$variable->variable_name.'\')"><img src="'.FLUTTER_URI.'images/list-duplicate.png" alt="Duplicate" title="Duplicate item"/></a>';
+				$content .= '<a href="javascript:void(0)" onclick="Canvas.removeListItem(this)"><img src="'.FLUTTER_URI.'images/list-delete.png" alt="Delete" title="Delete item"/></a>';
 				$content .= '</span>';
 				$counter++;
 			}
@@ -313,12 +313,12 @@ EOF;
 	elseif(strtolower($variable->type) == 'fileupload'){
 		
 		$value = attribute_escape($variable->value);
-		$path = CANVASURI.'files_flutter/';
+		$path = FLUTTER_URI.'files_flutter/';
 		$valueRelative = $value;
 		$value = $path.$value;
 		
 		$varName = $variable->variable_name;
-		$iframePath = CANVASURI."RCCWP_upload.php?input_name=".$varName;
+		$iframePath = FLUTTER_URI."RCCWP_upload.php?input_name=".$varName;
 		$content .= '<label class="textbox">'.$variable->description.': </label>'."\n";
 		if($valueRelative)
 			$content .= '(<a href="' . $value . '" target="_blank">View Current</a>)';
