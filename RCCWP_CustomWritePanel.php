@@ -507,7 +507,7 @@ class RCCWP_CustomWritePanel
 		// Append a number if the panel already exists,
 		$i = 1;
 		$newWritePanelName = $writePanelName;
-		//while (file_exists(FLUTTER_PATH.'/modules/'.$newModuleName)){
+		//while (file_exists(FLUTTER_MODULES_DIR.$newModuleName)){
 		//	$newModuleName = $moduleName. "_" . $i++;
 		//}
 		//$moduleName = $newModuleName;

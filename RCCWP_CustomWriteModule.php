@@ -72,7 +72,7 @@ class RCCWP_CustomWriteModule
 			return $customWriteModuleId;
 
 		// Create template folder
-		$moduleTemplateFolder = dirname(__FILE__)."/modules/".$name;
+		$moduleTemplateFolder = FLUTTER_MODULES_DIR.$name;
 		if (@mkdir($moduleTemplateFolder, 0777)){
 			@chmod($moduleTemplateFolder, 0777);
 			if (mkdir($moduleTemplateFolder.'/templates', 0777)){
@@ -168,7 +168,7 @@ EOF;
 
 			// Remove template folder
 			if (!empty($customWriteModuleName)){
-				$moduleTemplateFolder = dirname(__FILE__)."/modules/".$customWriteModuleName;
+				$moduleTemplateFolder = FLUTTER_MODULES_DIR.$customWriteModuleName;
 				RCCWP_CustomWriteModule::remove_dir($moduleTemplateFolder);
 			}
     
@@ -265,7 +265,7 @@ EOF;
 		$sql = "SELECT name FROM " . RC_CWP_TABLE_MODULES .
 			" WHERE id = $customWriteModuleId";
 		$originalModName = $wpdb->get_var($sql);
-		$oldModuleTemplateFolder = dirname(__FILE__)."/modules/".$originalModName;
+		$oldModuleTemplateFolder = FLUTTER_MODULES_DIR.$originalModName;
 
 		// Update name
 		$sql = sprintf(
@@ -280,7 +280,7 @@ EOF;
 		$wpdb->query($sql);
 
 		//Rename module folder
-		$newModuleTemplateFolder = dirname(__FILE__)."/modules/".$name;
+		$newModuleTemplateFolder = FLUTTER_MODULES_DIR.$name;
 		rename($oldModuleTemplateFolder, $newModuleTemplateFolder);
 		
 		return $customWriteModuleId;

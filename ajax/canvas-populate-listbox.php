@@ -11,7 +11,7 @@
 		$module_name = $_GET['mod_name'];
 		$selected_template_size = $_GET['template_size'];
 
-		$moduleTemplatesFolder = dirname(__FILE__)."/../modules/".$module_name."/templates/";
+		$moduleTemplatesFolder = FLUTTER_MODULES_DIR.$module_name."/templates/";
 
 		if ($_GET['template_name']=="") {
 			// Get first template

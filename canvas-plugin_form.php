@@ -44,8 +44,8 @@ $customWriteModule = RCCWP_CustomWriteModule::Get($module_id);
 $module_name = $customWriteModule->name;
 
 // Get plugin sizes
-$moduleTemplatesFolder = dirname(__FILE__)."/modules/".$module_name."/templates";
-$moduleTemplateFolder = dirname(__FILE__)."/modules/".$module_name."/templates/".$template_name;
+$moduleTemplatesFolder = FLUTTER_MODULES_DIR.$module_name."/templates";
+$moduleTemplateFolder = FLUTTER_MODULES_DIR.$module_name."/templates/".$template_name;
 
 // Load module template sizes
 $otherSizesStr = "";	
