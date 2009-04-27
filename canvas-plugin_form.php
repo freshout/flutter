@@ -313,7 +313,7 @@ EOF;
 	elseif(strtolower($variable->type) == 'fileupload'){
 		
 		$value = attribute_escape($variable->value);
-		$path = FLUTTER_URI.'files_flutter/';
+		$path = FLUTTER_FILES_URI;
 		$valueRelative = $value;
 		$value = $path.$value;
 		

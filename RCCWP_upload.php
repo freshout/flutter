@@ -22,8 +22,8 @@ if (isset($_POST['fileframe']))
 			$special_chars = array (' ','`','"','\'','\\','/'," ","#","$","%","^","&","*","!","~","‘","\"","’","'","=","?","/","[","]","(",")","|","<",">",";","\\",",");
 			$filename = str_replace($special_chars,'',$_FILES['file']['name']);
 			$filename = time() . $filename;
-			@move_uploaded_file( $_FILES['file']['tmp_name'], dirname(__FILE__) . '/files_flutter/' . $filename );
-			@chmod(dirname(__FILE__) . '/files_flutter/' . $filename, 0644);
+			@move_uploaded_file( $_FILES['file']['tmp_name'], FLUTTER_FILES_PATH . $filename );
+			@chmod(FLUTTER_FILES_PATH . $filename, 0644);
 
 // 			$result_msg = 'The file '.$_FILES['file']['name'].' was uploaded successfuly. Please remember to click the save button.';
 			$result_msg = "<font color=\"green\"><b>".__("Successful upload!",$flutter_domain)."</b></font>" ;
@@ -53,7 +53,7 @@ if (isset($_POST['fileframe']))
                                                                 "'.$_FILES['file']['name'].'",
                                                                 now(),
                                                                 now(),
-                                                                "'.FLUTTER_URI.'files_flutter/'.$filename.'",
+                                                                "'.FLUTTER_FILES_URI.$filename.'",
                                                                 "attachment",
                                                                 "'.$_FILES['file']['type'].'"
                                                             )';
@@ -72,7 +72,7 @@ if (isset($_POST['fileframe']))
 
 	// If operation is success, make sure the file was created properly
 	if ($operationSuccess == "true"){
-		if ($fp_check_file = @fopen(dirname(__FILE__) . '/files_flutter/' . $filename, 'rb')) {
+		if ($fp_check_file = @fopen(FLUTTER_FILES_PATH . $filename, 'rb')) {
 			fclose($fp_check_file);
 		}
 		else{
@@ -101,7 +101,7 @@ if (isset($_POST['fileframe']))
 			//Set image
 			<?php
 				//$newImagePath = FLUTTER_URI.'phpThumb.php
-                $newImagePath = PHPTHUMB.'?&w=150&h=120&src=../../files_flutter/'.$filename;
+                $newImagePath = PHPTHUMB.'?&w=150&h=120&src='.FLUTTER_FILES_PATH.$filename;
 				include_once("RCCWP_WritePostPage.php") ;
 				$edit_anchor = RCCWP_WritePostPage::snipshot_anchor($newImagePath) ;
 				if (isset($_POST['imageThumbID'])){ 

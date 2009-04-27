@@ -69,7 +69,7 @@ function completed(file,server_data)
     document.getElementById(file).value = hold[1] ;
 	if (document.getElementById( "img_thumb_"+file)){
 	
-		document.getElementById( "img_thumb_"+file ).src =phpthumb + "?&w=150&h=120&src=../../files_flutter/"+hold[1] ;
+		document.getElementById( "img_thumb_"+file ).src =phpthumb + "?&w=150&h=120&src="+JS_FLUTTER_FILES_PATH+hold[1] ;
 		var s = "<a href='#impossible_location' onclick=call_thickbox('"+hold[2]+"')>" ;
 		var e = "<strong onclick=prepareUpdatePhoto('"+file+"')>Edit</strong> </a>" ;
  		document.getElementById( "photo_edit_link_"+file ).innerHTML = s + e ;
@@ -99,7 +99,7 @@ function uploadurl(input_name,file_type)
 			progr.innerHTML = h[0] ;
 			if( document.getElementById( "img_thumb_"+input_name ) )
 			{
-				document.getElementById("img_thumb_"+input_name).src = phpthumb+"?&w=150&h=120&src=../../files_flutter/"+h[1];
+				document.getElementById("img_thumb_"+input_name).src = phpthumb+"?&w=150&h=120&src="+JS_FLUTTER_FILES_PATH+h[1];
 				var s = "<a href='#impossible_location' onclick=call_thickbox('"+h[2]+"')>";
 				var e = "<strong onclick=prepareUpdatePhoto('"+input_name+"')>Edit</strong> </a>";
  				document.getElementById( "photo_edit_link_"+input_name ).innerHTML = s + e;

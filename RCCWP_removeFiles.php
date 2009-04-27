@@ -23,7 +23,7 @@
         }
         
         //deleting  file
-        unlink("./files_flutter/{$file}");
+        unlink(FLUTTER_FILES_PATH.$file);
         echo "true";
         exit();
     }
