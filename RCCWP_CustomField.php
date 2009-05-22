@@ -226,7 +226,7 @@ class RCCWP_CustomField
 	function GetCustomFieldValues($single, $postId, $customFieldName, $groupIndex=1, $fieldIndex=1)
 	{
 		global $wpdb;
-		
+		$customFieldName = str_replace(" ","_",$customFieldName);
 		$fieldMetaID = RCCWP_CustomField::GetMetaID($postId, $customFieldName, $groupIndex, $fieldIndex);
 		
 		// for backward compatability, if no accociated row was found, use old method
