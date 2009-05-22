@@ -452,10 +452,20 @@ class RCCWP_CustomWritePanel
 		
 		if($default_theme_page){
 			$theme_key="t_".$name;
-			$sql = "UPDATE ". $wpdb->postmeta .
-				" SET meta_value = '".$default_theme_page."' ".
-				" WHERE meta_key = '".$theme_key."' AND post_id = '0' ";
-				
+			
+			//check if exist template in postmeta
+			$check_template ="SELECT meta_id FROM ".$wpdb->postmeta." WHERE meta_key='".$theme_key."' ";
+			$query_template= $wpdb->query($check_template);
+			
+			if($query_template){
+				$sql = "UPDATE ". $wpdb->postmeta .
+					" SET meta_value = '".$default_theme_page."' ".
+					" WHERE meta_key = '".$theme_key."' AND post_id = '0' ";
+			}else{
+				$sql = "INSERT INTO ". $wpdb->postmeta .
+								" (meta_key, meta_value) ".
+								" VALUES ('".$theme_key."', '".$default_theme_page."')";				
+			}
 			$wpdb->query($sql);
 			
 			
