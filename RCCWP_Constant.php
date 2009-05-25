@@ -10,7 +10,7 @@ if (!defined('DIRECTORY_SEPARATOR'))
 }
 
 // General Constants
-define('RC_CWP_DB_VERSION', 39);
+define('RC_CWP_DB_VERSION', 40);
 define('RC_CWP_POST_WRITE_PANEL_ID_META_KEY', '_rc_cwp_write_panel_id');
 define('RC_CWP_OPTION_KEY', 'rc_custom_write_panel');
 

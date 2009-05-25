@@ -393,7 +393,15 @@ class RCCWP_Application
 			
 		}
 		
-		
+		if(RC_CWP_DB_VERSION >= 40){ 
+            $wpdb->query("ALTER TABLE " . RC_CWP_TABLE_PANELS . " MODIFY name varchar(255) NOT NULL");
+	    $wpdb->query("ALTER TABLE " . RC_CWP_TABLE_PANELS . " MODIFY capability_name varchar(255) NOT NULL");
+	    $wpdb->query("ALTER TABLE " . RC_CWP_TABLE_CUSTOM_FIELD_TYPES . " MODIFY name varchar(255) NOT NULL");
+	    $wpdb->query("ALTER TABLE " . RC_CWP_TABLE_GROUP_FIELDS . " MODIFY name varchar(255) NOT NULL");
+	    $wpdb->query("ALTER TABLE " . RC_CWP_TABLE_MODULES . " MODIFY name varchar(255) NOT NULL");
+	    $wpdb->query("ALTER TABLE " . RC_CWP_TABLE_PANEL_GROUPS . " MODIFY name varchar(255) NOT NULL");
+            //$wpdb->query('update '.RC_CWP_TABLE_POST_META.' ps, '.RC_CWP_TABLE_GROUP_FIELDS.' cf, '.RC_CWP_TABLE_PANEL_GROUPS.' mg set ps.order_id=-1 where mg.name="__default" and mg.id=cf.group_id AND cf.name=ps.field_name');
+        }
 		
 		
 		//Import Default modules 
@@ -445,6 +453,8 @@ class RCCWP_Application
             $wpdb->query("update ".RC_CWP_TABLE_POST_META." ps, ".RC_CWP_TABLE_GROUP_FIELDS." cf, ".RC_CWP_TABLE_PANEL_GROUPS." mg set ps.order_id=ps.group_count");
             //$wpdb->query('update '.RC_CWP_TABLE_POST_META.' ps, '.RC_CWP_TABLE_GROUP_FIELDS.' cf, '.RC_CWP_TABLE_PANEL_GROUPS.' mg set ps.order_id=-1 where mg.name="__default" and mg.id=cf.group_id AND cf.name=ps.field_name');
         }
+	
+	
 		
 	}
 
