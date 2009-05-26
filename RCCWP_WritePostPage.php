@@ -1111,7 +1111,7 @@ padding:4px 5px 2px;
 		{
 			$customFieldId = $customField->id;
 			$value = attribute_escape(RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter));
-			$path = FLUTTER_URI.'files_flutter/';
+			$path = FLUTTER_FILES_URI;
 			$valueRelative = $value;
 			$value = $path.$value;
 		}
@@ -1192,14 +1192,14 @@ padding:4px 5px 2px;
 			$customFieldId = $customField->id;
 			$value = RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter);
 
-            $path = PHPTHUMB."?src=../../files_flutter/";
+            $path = PHPTHUMB."?src=".FLUTTER_FILES_PATH;
 			$valueRelative = $value;
 			$value = $path.$value;
 			if(!(strpos($value, 'http') === FALSE))
 				$hidValue = str_replace('"', "'", $valueRelative);
 			$value = stripslashes(trim("\<img src=\'".$value."\' class=\"freshout\" \/\>"));
 		} else if( !empty($customField->value)){
-            $path = PHPTHUMB."?src=../../files_flutter/";
+            $path = PHPTHUMB."?src=".FLUTTER_FILES_PATH;
             $valueRelative = $customField->value;
             $value  = $path.$customField->value;
 
@@ -1514,7 +1514,7 @@ padding:4px 5px 2px;
 		{
 			$customFieldId = $customField->id;
 			$valueOriginal = RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter);
-			$path = FLUTTER_URI . 'files_flutter/';
+			$path = FLUTTER_FILES_URI;
 			$$valueOriginalRelative = $valueOriginal;
 			$valueOriginal = $path.$valueOriginal;
 			if (!empty($valueOriginal))

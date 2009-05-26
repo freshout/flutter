@@ -12,7 +12,7 @@ if (!(is_user_logged_in() && current_user_can('edit_posts'))){
     //to your image directory.
 
     //CHANGE THIS TO THE DIRECTORY WHERE YOUR IMAGES WILL BE SAVED
-    $IMG_DIR = './files_flutter';
+    $IMG_DIR = FLUTTER_FILES_PATH;
     chdir($IMG_DIR);
     
     //CHANGE THIS TO THE NAME OF THE FIELD THAT CARRIES THE IMAGE DATA OR URL

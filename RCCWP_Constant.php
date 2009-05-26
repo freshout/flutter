@@ -1,4 +1,5 @@
 <?php
+require_once( dirname(__FILE__) . '/../../../wp-config.php' );
 global $wpdb;
 
 if (!defined('DIRECTORY_SEPARATOR'))
@@ -24,8 +25,6 @@ define("FLUTTER_PATH", dirname(__FILE__));
 define("FLUTTER_URI", get_bloginfo('wpurl').'/wp-content'.$flutterpath[1]); //returns somthing similar to "http://127.0.0.1/wp-content/plugins/Flutter/"
 define("FLUTTER_URI_RELATIVE", 'wp-content'.$flutterpath[1]); //returns somthing similar to "wp-content/plugins/Flutter/"
 define("PHPTHUMB",FLUTTER_URI."thirdparty/phpthumb/phpThumb.php");
-
-
 
 // -- Tables names
 
@@ -103,9 +102,14 @@ $STANDARD_FIELDS[16] = new FlutterPanelFields(16, 'Page Template', array('pagete
 $STANDARD_FIELDS[17] = new FlutterPanelFields(17, 'Page Order', array('pageorderdiv'), true, true, false, true, 1000);										
 
 // Important folders
-define('FLUTTER_UPLOAD_FILES_DIR', dirname(__FILE__).DIRECTORY_SEPARATOR."files_flutter".DIRECTORY_SEPARATOR);
-define('FLUTTER_IMAGES_CACHE_DIR', dirname(__FILE__).DIRECTORY_SEPARATOR."cache".DIRECTORY_SEPARATOR);
-define('FLUTTER_MODULES_DIR', dirname(__FILE__).DIRECTORY_SEPARATOR."modules".DIRECTORY_SEPARATOR);
+define('FLUTTER_CONTENT_PATH', WP_CONTENT_DIR.DIRECTORY_SEPARATOR.'flutter');
+define('FLUTTER_CONTENT_URI', WP_CONTENT_URL.'/flutter');
+define('FLUTTER_FILES_PATH', FLUTTER_CONTENT_PATH.DIRECTORY_SEPARATOR.'files'.DIRECTORY_SEPARATOR);
+define('FLUTTER_FILES_URI', FLUTTER_CONTENT_URI.'/files/');
+
+define('FLUTTER_UPLOAD_FILES_DIR', FLUTTER_FILES_PATH);
+define('FLUTTER_IMAGES_CACHE_DIR', FLUTTER_CONTENT_PATH.DIRECTORY_SEPARATOR.'cache'.DIRECTORY_SEPARATOR);
+define('FLUTTER_MODULES_DIR', FLUTTER_CONTENT_PATH.DIRECTORY_SEPARATOR."modules".DIRECTORY_SEPARATOR);
 
 // Capabilities names
 define('FLUTTER_CAPABILITY_PANELS', "Create Flutter Panels");

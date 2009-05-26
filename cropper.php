@@ -117,7 +117,7 @@ if (!(is_user_logged_in() && current_user_can('edit_posts')))
 				
 			window.parent.parent.document.getElementById("<?php echo $_GET["input_name"]?>").value = requiredString;
 			
-			requiredString = "<?php echo PHPTHUMB.'?src=../../files_flutter/' ?>" + requiredString; 
+			requiredString = "<?php echo PHPTHUMB.'?src='.FLUTTER_FILES_PATH ?>" + requiredString; 
 
 			document.getElementById('tempSrc').value = requiredString;
 			window.parent.parent.exchangeValues(requiredString, document.getElementById('imageThumbId').value); 
@@ -164,7 +164,7 @@ if (!(is_user_logged_in() && current_user_can('edit_posts')))
 			
 		$j = 0;
 		$tmpArr = explode('&', $finalSrc);
-		$pureImage = FLUTTER_URI.'files_flutter/'.$tmpArr[0];
+		$pureImage = FLUTTER_FILES_URI.$tmpArr[0];
 			
 	?>
 		<div id="testWrap" style="z-index:1;">
