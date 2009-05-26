@@ -87,6 +87,10 @@ function get ($fieldName, $groupIndex=1, $fieldIndex=1, $readyForEIP=true) {
 	if($fieldType == $FIELD_TYPES['multiline_textbox']){
 		$results = apply_filters('the_content', $results);
 	}
+	if($fieldType == $FIELD_TYPES['image']){
+		$results = split('&',$results);
+		$results = $results[0];
+	}
 	
 	// Prepare fields for EIP 
 	include_once('RCCWP_Options.php');
