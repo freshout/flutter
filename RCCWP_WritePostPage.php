@@ -100,6 +100,7 @@ class RCCWP_WritePostPage {
 		<script type="text/javascript">
 			var GB_ROOT_DIR = "<?php echo FLUTTER_URI?>js/greybox/";
 			var flutter_path = "<?php echo FLUTTER_URI ?>" ;
+			var JS_FLUTTER_FILES_PATH = '<?php echo FLUTTER_FILES_PATH ?>';
 			var swf_authentication = "<?php if ( function_exists('is_ssl') && is_ssl() ) echo $_COOKIE[SECURE_AUTH_COOKIE]; else echo $_COOKIE[AUTH_COOKIE]; ?>" ;
 			var swf_nonce = "<?php echo wp_create_nonce('media-form'); ?>" ;
 		</script>
