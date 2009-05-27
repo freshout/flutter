@@ -4,4 +4,4 @@ files_flutter/
 cache/
 *.log
 .svn/
-
+.DS_Store
