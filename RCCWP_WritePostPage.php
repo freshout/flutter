@@ -100,6 +100,7 @@ class RCCWP_WritePostPage {
 		<script type="text/javascript">
 			var GB_ROOT_DIR = "<?php echo FLUTTER_URI?>js/greybox/";
 			var flutter_path = "<?php echo FLUTTER_URI ?>" ;
+			var JS_FLUTTER_FILES_PATH = '<?php echo FLUTTER_FILES_PATH ?>';
 			var swf_authentication = "<?php if ( function_exists('is_ssl') && is_ssl() ) echo $_COOKIE[SECURE_AUTH_COOKIE]; else echo $_COOKIE[AUTH_COOKIE]; ?>" ;
 			var swf_nonce = "<?php echo wp_create_nonce('media-form'); ?>" ;
 		</script>
@@ -1111,7 +1112,7 @@ padding:4px 5px 2px;
 		{
 			$customFieldId = $customField->id;
 			$value = attribute_escape(RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter));
-			$path = FLUTTER_URI.'files_flutter/';
+			$path = FLUTTER_FILES_URI;
 			$valueRelative = $value;
 			$value = $path.$value;
 		}
@@ -1192,14 +1193,14 @@ padding:4px 5px 2px;
 			$customFieldId = $customField->id;
 			$value = RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter);
 
-            $path = PHPTHUMB."?src=../../files_flutter/";
+            $path = PHPTHUMB."?src=".FLUTTER_FILES_PATH;
 			$valueRelative = $value;
 			$value = $path.$value;
 			if(!(strpos($value, 'http') === FALSE))
 				$hidValue = str_replace('"', "'", $valueRelative);
 			$value = stripslashes(trim("\<img src=\'".$value."\' class=\"freshout\" \/\>"));
 		} else if( !empty($customField->value)){
-            $path = PHPTHUMB."?src=../../files_flutter/";
+            $path = PHPTHUMB."?src=".FLUTTER_FILES_PATH;
             $valueRelative = $customField->value;
             $value  = $path.$customField->value;
 
@@ -1514,7 +1515,7 @@ padding:4px 5px 2px;
 		{
 			$customFieldId = $customField->id;
 			$valueOriginal = RCCWP_CustomField::GetCustomFieldValues(true, $_REQUEST['post'], $customField->name, $groupCounter, $fieldCounter);
-			$path = FLUTTER_URI . 'files_flutter/';
+			$path = FLUTTER_FILES_URI;
 			$$valueOriginalRelative = $valueOriginal;
 			$valueOriginal = $path.$valueOriginal;
 			if (!empty($valueOriginal))

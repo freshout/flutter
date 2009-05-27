@@ -59,6 +59,7 @@ class FlutterLayout{
 			
 			<script language="JavaScript" type="text/javascript" > 
 				var JS_FLUTTER_URI = '<?php echo $FLUTTER_URI?>'; // Flutter URL
+				var JS_FLUTTER_FILES_PATH = '<?php echo FLUTTER_FILES_PATH ?>'; // Flutter URL
 				var CURRENT_PAGE = '<?php echo $page?>'; // The name of the current page
 			</script>
 			<script type="text/javascript" src="<?php echo $jquery_path?>"></script>

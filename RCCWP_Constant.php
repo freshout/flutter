@@ -1,4 +1,5 @@
 <?php
+require_once( dirname(__FILE__) . '/../../../wp-config.php' );
 global $wpdb;
 
 if (!defined('DIRECTORY_SEPARATOR'))
@@ -24,8 +25,6 @@ define("FLUTTER_PATH", dirname(__FILE__));
 define("FLUTTER_URI", get_bloginfo('wpurl').'/wp-content'.$flutterpath[1]); //returns somthing similar to "http://127.0.0.1/wp-content/plugins/Flutter/"
 define("FLUTTER_URI_RELATIVE", 'wp-content'.$flutterpath[1]); //returns somthing similar to "wp-content/plugins/Flutter/"
 define("PHPTHUMB",FLUTTER_URI."thirdparty/phpthumb/phpThumb.php");
-
-
 
 // -- Tables names
 
@@ -102,11 +101,23 @@ $STANDARD_FIELDS[15] = new FlutterPanelFields(15, 'Page Parent', array('pagepare
 $STANDARD_FIELDS[16] = new FlutterPanelFields(16, 'Page Template', array('pagetemplatediv'), true, true, false, true, 1000);
 $STANDARD_FIELDS[17] = new FlutterPanelFields(17, 'Page Order', array('pageorderdiv'), true, true, false, true, 1000);										
 
-// Important folders
-define('FLUTTER_UPLOAD_FILES_DIR', dirname(__FILE__).DIRECTORY_SEPARATOR."files_flutter".DIRECTORY_SEPARATOR);
-define('FLUTTER_IMAGES_CACHE_DIR', dirname(__FILE__).DIRECTORY_SEPARATOR."cache".DIRECTORY_SEPARATOR);
-define('FLUTTER_MODULES_DIR', dirname(__FILE__).DIRECTORY_SEPARATOR."modules".DIRECTORY_SEPARATOR);
 
+// define name the folder of plugin (flutter, Flutter or fresh-page)
+define('FLUTTER_NAME', dirname(plugin_basename(__FILE__)));
+
+// Important folders
+define('FLUTTER_CONTENT_PATH', WP_CONTENT_DIR.DIRECTORY_SEPARATOR.FLUTTER_NAME);
+define('FLUTTER_CONTENT_URI', WP_CONTENT_URL.DIRECTORY_SEPARATOR.FLUTTER_NAME);
+
+// files of flutter is wp-content/files_flutter/
+define('FLUTTER_FILES_NAME','files_flutter');
+define('FLUTTER_FILES_PATH', WP_CONTENT_DIR.DIRECTORY_SEPARATOR.FLUTTER_FILES_NAME.DIRECTORY_SEPARATOR);
+define('FLUTTER_FILES_URI', WP_CONTENT_URL.DIRECTORY_SEPARATOR.FLUTTER_FILES_NAME.DIRECTORY_SEPARATOR);
+
+
+define('FLUTTER_UPLOAD_FILES_DIR', FLUTTER_FILES_PATH);
+define('FLUTTER_IMAGES_CACHE_DIR', WP_CONTENT_DIR.DIRECTORY_SEPARATOR."plugins".DIRECTORY_SEPARATOR.FLUTTER_NAME.DIRECTORY_SEPARATOR.'thirdparty'.DIRECTORY_SEPARATOR.'phpthumb'.DIRECTORY_SEPARATOR.'cache'.DIRECTORY_SEPARATOR);
+define('FLUTTER_MODULES_DIR', FLUTTER_FILES_PATH."modules".DIRECTORY_SEPARATOR);
 // Capabilities names
 define('FLUTTER_CAPABILITY_PANELS', "Create Flutter Panels");
 define('FLUTTER_CAPABILITY_MODULES', "Create Flutter Modules");

@@ -87,6 +87,10 @@ function get ($fieldName, $groupIndex=1, $fieldIndex=1, $readyForEIP=true) {
 	if($fieldType == $FIELD_TYPES['multiline_textbox']){
 		$results = apply_filters('the_content', $results);
 	}
+	if($fieldType == $FIELD_TYPES['image']){
+		$results = split('&',$results);
+		$results = $results[0];
+	}
 	
 	// Prepare fields for EIP 
 	include_once('RCCWP_Options.php');
@@ -121,7 +125,7 @@ function GetProcessedFieldValue($fieldValues, $fieldType, $fieldProperties=array
 			case $FIELD_TYPES["audio"]:
 			case $FIELD_TYPES["file"]:
 			case $FIELD_TYPES["image"]:
-				if ($fieldValue != "") $fieldValue = FLUTTER_URI.'files_flutter/'.$fieldValue;
+				if ($fieldValue != "") $fieldValue = FLUTTER_FILES_URI.$fieldValue;
 				break;
 	
 			case $FIELD_TYPES["checkbox"]: 		
@@ -185,21 +189,21 @@ function get_image ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 	
 	 //check if exist params, if not exist params, return original image
 	if (empty($fieldObject->properties['params']) && (FALSE == strstr($fieldValue, "&"))){
-		$fieldValue = get_bloginfo('wpurl').'/'.FLUTTER_URI_RELATIVE.'files_flutter/'.$fieldValue;
+		$fieldValue = FLUTTER_FILES_URI.$fieldValue;
 	}else{
 		//check if exist thumb image, if exist return thumb image
 		$md5_params = md5($fieldObject->properties['params']);
-		if (file_exists(dirname(__FILE__).'/files_flutter/th_'.$md5_params."_".$fieldValue)) {
-			$fieldValue = get_bloginfo('wpurl').'/'.FLUTTER_URI_RELATIVE.'files_flutter/th_'.$md5_params."_".$fieldValue;
+		if (file_exists(FLUTTER_FILES_PATH.'th_'.$md5_params."_".$fieldValue)) {
+			$fieldValue = FLUTTER_FILES_URI.'th_'.$md5_params."_".$fieldValue;
 		}else{
 			//generate thumb
 			//include_once(FLUTTER_URI_RELATIVE.'thirdparty/phpthumb/phpthumb.class.php');
 			include_once(dirname(__FILE__)."/thirdparty/phpthumb/phpthumb.class.php");
 			$phpThumb = new phpThumb();
-			$phpThumb->setSourceFilename(dirname(__FILE__).'/files_flutter/'.$fieldValue);
+			$phpThumb->setSourceFilename(FLUTTER_FILES_PATH.$fieldValue);
 			$create_md5_filename = 'th_'.$md5_params."_".$fieldValue;
-			$output_filename = dirname(__FILE__).'/files_flutter/'.$create_md5_filename;
-			$final_filename = get_bloginfo('wpurl').'/'.FLUTTER_URI_RELATIVE.'files_flutter/'.$create_md5_filename;
+			$output_filename = FLUTTER_FILES_PATH.$create_md5_filename;
+			$final_filename = FLUTTER_FILES_URI.$create_md5_filename;
 
 			$params_image = explode("&",$fieldObject->properties['params']);
 			foreach($params_image as $param){
@@ -259,10 +263,10 @@ function get_image_old ($fieldName, $groupIndex=1, $fieldIndex=1,$tag_img=1) {
 
 
 	if (empty($fieldObject->properties['params']) && (FALSE == strstr($fieldValue, "&"))){
-		$fieldValue = '../../files_flutter/'.$fieldValue; 
+		$fieldValue = FLUTTER_FILES_PATH.$fieldValue; 
 	}
 	else{
-        $path = "../../files_flutter/";
+        $path = FLUTTER_FILES_PATH;
 		$fieldValue = $path.$fieldValue.$fieldObject->properties['params'];
 	}
         
@@ -306,7 +310,7 @@ function get_audio ($fieldName, $groupIndex=1, $fieldIndex=1) {
 	else 
 		return "";
 		
-	$path = FLUTTER_URI.'files_flutter/';
+	$path = FLUTTER_FILES_URI;
 	$fieldValue = $path.$fieldValue;
 	$finalString = stripslashes(trim("\<div style=\'padding-top:3px;\'\>\<object classid=\'clsid:D27CDB6E-AE6D-11cf-96B8-444553540000\' codebase='\http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0\' width=\'95%\' height=\'20\' wmode=\'transparent\' \>\<param name=\'movie\' value=\'".FLUTTER_URI."js/singlemp3player.swf?file=".urlencode($fieldValue)."\' wmode=\'transparent\' /\>\<param name=\'quality\' value=\'high\' wmode=\'transparent\' /\>\<embed src=\'".FLUTTER_URI."js/singlemp3player.swf?file=".urlencode($fieldValue)."' width=\'50\%\' height=\'20\' quality=\'high\' pluginspage=\'http://www.macromedia.com/go/getflashplayer\' type=\'application/x-shockwave-flash\' wmode=\'transparent\' \>\</embed\>\</object\>\</div\>"));
 	return $finalString;

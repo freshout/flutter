@@ -54,7 +54,7 @@
 	
 			$filename = time() . '_' . str_replace( 'rc_cwp_meta_', '', $_POST["input_name"]) . '.' . $ext;
 			
-			$directory = dirname(__FILE__) . '/files_flutter/';
+			$directory = FLUTTER_FILES_PATH;
 	
 			$fp_dest = @fopen($directory . $filename,"wb");
 			if ($fp_dest == false) return false;
@@ -100,7 +100,7 @@
 			$operationSuccess = "true";
 		}
 		include_once("RCCWP_WritePostPage.php") ;
-		$edit_anchor = RCCWP_WritePostPage::snipshot_anchor(FLUTTER_URI.'files_flutter/'.$filename) ;
+		$edit_anchor = RCCWP_WritePostPage::snipshot_anchor(FLUTTER_FILES_URI.$filename) ;
 		echo $result_msg."*".$filename."*".$edit_anchor ;
 	}
 
@@ -111,8 +111,8 @@ if( isset($_FILES['async-upload'] ) )
 		$special_chars = array (' ','`','"','\'','\\','/'," ","#","$","%","^","&","*","!","~","‘","\"","’","'","=","?","/","[","]","(",")","|","<",">",";","\\",",");
 		$filename = str_replace($special_chars,'',$_FILES['async-upload']['name']);
 		$filename = time() . $filename;
-		@move_uploaded_file( $_FILES['async-upload']['tmp_name'], dirname(__FILE__) . '/files_flutter/' . $filename );
-		@chmod(dirname(__FILE__) . '/files_flutter/' . $filename, 0644);
+		@move_uploaded_file( $_FILES['async-upload']['tmp_name'], FLUTTER_FILES_PATH . $filename );
+		@chmod(FLUTTER_FILES_PATH . $filename, 0644);
 
 // 		$result_msg = 'The file '.$_FILES['Filedata']['name'].' was uploaded successfuly. Please remember to click the save button.';
 		$result_msg = "<font color='green'><b>".__("Successful upload",$flutter_domain)."!</b></font>" ;
@@ -124,7 +124,7 @@ if( isset($_FILES['async-upload'] ) )
 		$result_msg = "<font color='red'><b>".__("Upload Unsuccessful",$flutter_domain)."!</b></font>";
 
 	include_once("RCCWP_WritePostPage.php") ;
-	$edit_anchor = RCCWP_WritePostPage::snipshot_anchor(FLUTTER_URI.'files_flutter/'.$filename) ;
+	$edit_anchor = RCCWP_WritePostPage::snipshot_anchor(FLUTTER_FILES_URI.$filename) ;
 	echo $result_msg."*".$filename."*".$edit_anchor ;
 }
 ?>
