@@ -4,7 +4,7 @@ Plugin Name: Flutter
 Plugin URI: http://flutter.freshout.us/
 Description: Create custom write panels and easily retrieve their values in your templates.
 Author: Freshout
-Version: .2.51
+Version: .3.0
 Author URI: http://freshout.us
 */
 
