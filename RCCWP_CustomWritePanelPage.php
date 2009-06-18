@@ -127,16 +127,16 @@ class RCCWP_CustomWritePanelPage
 					{
 						if ($customWritePanelAllFieldIds->single == 0)
 						{
-							$multiple_checked="checked=\"checked\"";
+							$multiple_checked='checked="checked"';
 						}else{
-							$single_checked="checked=\"checked\"";
+							$single_checked='checked="checked"';
 						}
 					}else{
-						$multiple_checked="checked=\"checked\"";
+						$multiple_checked='checked="checked"';
 					}
 				?>
-				<input type="radio" name="single" id="radPostPage" value="1" <?=$single_checked?>  /> <strong><?php _e('Single', $flutter_domain); ?> </strong> &nbsp; &nbsp; &nbsp; 
-				<input type="radio" name="single" id="radPostPage" value="0" <?=$multiple_checked?>  /> <strong><?php _e('Multiple', $flutter_domain); ?></strong>
+				<input type="radio" name="single" id="radPostPage" value="1" <?php echo $single_checked?>  /> <strong><?php _e('Single', $flutter_domain); ?> </strong> &nbsp; &nbsp; &nbsp; 
+				<input type="radio" name="single" id="radPostPage" value="0" <?php echo $multiple_checked?>  /> <strong><?php _e('Multiple', $flutter_domain); ?></strong>
              </td>
         </tr>
 
