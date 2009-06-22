@@ -1,0 +1,952 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Flutter\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2009-01-16 10:15-0600\n"
+"PO-Revision-Date: 2009-03-14 14:17+0100\n"
+"Last-Translator: Bouke <boukevanderbijl@gmail.com>\n"
+"Language-Team: Bouke van der Bijl <boukevanderbijl@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Dutch\n"
+"X-Poedit-Country: The Netherlands\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e\n"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:57
+msgid "Post was not published - "
+msgstr "Het bericht was niet gepubliceerd -"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:57
+msgid "You have errors in some fields, please check the fields below."
+msgstr "U heeft fouten in een paar velden, controleer alstublieft onderstaande velden."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:212
+msgid "You do not have sufficient permissions to access this custom write panel."
+msgstr "U heeft niet de juiste machtigingen voor toegang tot dit aangepaste schrijfpaneel."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:629
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:687
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:775
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:890
+msgid "Loading"
+msgstr "Aan het laden"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:792
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:907
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:915
+msgid "Add group duplicate"
+msgstr "Voeg groep duplicaat toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:792
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:907
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:915
+msgid "Duplicate Group"
+msgstr "Dupliceer Groep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:800
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:918
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1023
+msgid "Remove field duplicate"
+msgstr "Verwijder groep duplicaat"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:800
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:918
+msgid "Remove Group"
+msgstr "Verwijder Groep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1011
+msgid "Add field duplicate"
+msgstr "Voeg veld duplicaat toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1011
+msgid "Duplicate"
+msgstr "Dupliceer"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1023
+msgid "Remove"
+msgstr "Verwijder"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1104
+msgid "--Select--"
+msgstr "--Selecteer--"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1302
+msgid "View Current"
+msgstr "Toon Huidige"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1303
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1516
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1703
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:301
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:341
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:366
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:182
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:153
+msgid "Delete"
+msgstr "Vernietig"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1386
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1404
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1682
+msgid "Are you sure?"
+msgstr "Weet Je Het Zeker? "
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1509
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:211
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:215
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:300
+msgid "Edit"
+msgstr "Bewerk"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_WritePostPage.php:1513
+msgid "Crop"
+msgstr "Bijsnijden"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomGroupPage.php:12
+msgid "Create Custom Group"
+msgstr "Maak Aangepaste Groep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomGroupPage.php:19
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:224
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:248
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ModuleDuplicatePage.php:57
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:162
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:78
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomWritePanelPage.php:19
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:72
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomWriteModulePage.php:19
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:151
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:302
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreatePanelModulePage.php:49
+msgid "Cancel"
+msgstr "Annuleer"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomGroupPage.php:20
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomWritePanelPage.php:20
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomWriteModulePage.php:20
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:303
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreatePanelModulePage.php:50
+msgid "Finish"
+msgstr "Voltooi"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:18
+msgid "Assign Custom Write Panel"
+msgstr "Wijs Aangepast Schrijf Paneel Toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:25
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:406
+msgid "Custom Write Panel"
+msgstr "Aangepast Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:28
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:82
+msgid "(None)"
+msgstr "(Geen)"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:46
+msgid "Don't Assign Custom Write Panel"
+msgstr "Wijs Geen Aangepast Schrijf Paneel Toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:47
+msgid "Edit with Custom Write Panel"
+msgstr "Bewerk met Aangepast Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:188
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:158
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:314
+msgid "Modules"
+msgstr "Modules"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:191
+msgid "Import a Module"
+msgstr "Importeer een Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:192
+msgid "Create a Module"
+msgstr "Maak een Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:200
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:63
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:328
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:419
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:38
+#: /home/sites/wp/wp-content/plugins/Flutter/ajax-list-field-names.php:26
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ModuleDuplicatePage.php:32
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:162
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:255
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:31
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:38
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:106
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:140
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:39
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreatePanelModulePage.php:28
+msgid "Name"
+msgstr "Naam"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:201
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:330
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:420
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:162
+msgid "Actions"
+msgstr "Acties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ManagementPage.php:212
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:302
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:431
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ExportModule.php:123
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ExportModule.php:139
+msgid "Export"
+msgstr "Exporteer"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:35
+msgid "Placement"
+msgstr "Plaatsing"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:56
+msgid "Post"
+msgstr "Bericht"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:57
+msgid "Page"
+msgstr "Pagina"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:71
+msgid "Assigned Categories"
+msgstr "Aangewezen Catogoriën"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:95
+msgid "Quantity"
+msgstr "Hoevellheid"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:97
+msgid "Single"
+msgstr "Enkel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:98
+msgid "Multiple"
+msgstr "Meerdere"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:103
+msgid "Standard Fields"
+msgstr "Standaar velden"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:143
+msgid "Advanced Fields"
+msgstr "Geavanceerde Velden"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:183
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:51
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:74
+msgid "Order"
+msgstr "Volgorde"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:196
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:49
+msgid "Custom Fields"
+msgstr "Aangepaste Velden"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:197
+msgid "Add custom fields later by editing this custom write panel."
+msgstr "Voeg aangepaste velden later toe door dit aangepaste schrijf paneel te bewerken."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:215
+msgid "Write Panel"
+msgstr "Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:225
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:249
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ModuleDuplicatePage.php:58
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:79
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:73
+msgid "Update"
+msgstr "Update"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:290
+msgid "Are you sure you want to delete this write panel?"
+msgstr "Weet je zeker dat je dit schrijf paneel wilt verwijderen?"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:307
+msgid "Choose a Write Panel"
+msgstr "Kies een Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:318
+msgid "Create a Group"
+msgstr "Maak een Groep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:319
+msgid "Create a Field"
+msgstr "Maak een Veld"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:329
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:149
+#: /home/sites/wp/wp-content/plugins/Flutter/ajax-list-field-names.php:24
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:267
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:90
+msgid "Type"
+msgstr "Type"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:339
+msgid "create field"
+msgstr "maak veld"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:340
+msgid "Group"
+msgstr "Groep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:383
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:177
+msgid "Error uploading file!"
+msgstr "Fout met het uploaden van bestand!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:391
+msgid "The Write Panel was imported successfuly."
+msgstr "Het Schrijf Paneel was succesvol geïmporteerd."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:392
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:185
+msgid "Click here"
+msgstr "Klik hier"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:392
+msgid "to edit the write panel."
+msgstr "om het schrijf paneel te bewerken."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:409
+msgid "Import a Write Panel"
+msgstr "Importeer een Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:410
+msgid "Create a Write Panel"
+msgstr "Maak een Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:429
+msgid "Edit Fields/Groups"
+msgstr "Bewerk Velden/Groepen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWritePanelPage.php:430
+msgid "Edit Write Panel"
+msgstr "Bewerk Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Application.php:583
+msgid "Flutter is not ready yet."
+msgstr "Flutter is nog niet klaar."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Application.php:583
+msgid "The following folders must be writable (usually chmod 777 is neccesary):"
+msgstr "De volgende folders moeten beschrijfbaar zijn (meestal is chmod 777 nodig):"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:16
+msgid "Edit Custom Field"
+msgstr "Bewerk Aangepast Veld"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:24
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:20
+msgid "A field with the same name already exists in this write panel. Please choose a different name."
+msgstr "Een veld met de zelfde naam bestaat al in dit schrijf paneel. Kies alstublieft een andere naam."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:42
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:58
+msgid "Label"
+msgstr "Label"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:47
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:69
+msgid "Can be duplicated"
+msgstr "Kan worden gekopieerd"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:67
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:80
+msgid "Required"
+msgstr "Benodigd"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:70
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:83
+msgid "Not Required - can be empty"
+msgstr "Niet benodigd - kan leeg zijn"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:71
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:84
+msgid "Required - can not be empty"
+msgstr "Benodigd - kan niet leeg zijn"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:80
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:203
+msgid "Size"
+msgstr "Grootte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:87
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:214
+msgid "Height"
+msgstr "Hoogte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:91
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:218
+msgid "Width"
+msgstr "Breedte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:98
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:283
+msgid "Format"
+msgstr "Formaat"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:120
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:231
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:259
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:281
+msgid "Options"
+msgstr "Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:123
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:234
+msgid "Separate each option with a newline."
+msgstr "Scheid elke optie met een nieuwe lijn."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:127
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:238
+msgid "Default Value"
+msgstr "Standaard waards"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:134
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:244
+msgid "Separate each value with a newline."
+msgstr "Scheid elke waarde met een nieuwe lijn."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:179
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:113
+msgid "Please fill in the name and the label of the field"
+msgstr "Vul alstublieft de naam in "
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:226
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:261
+msgid "Max Height"
+msgstr "Maximale hoogte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:230
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:262
+msgid "Max Width"
+msgstr "Maximale Breedte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomFieldPage.php:234
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:138
+msgid "Css Class"
+msgstr "Css Klasse"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetFile.php:15
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetDuplicate.php:5
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:5
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ExportModule.php:6
+msgid "Athentication failed!"
+msgstr "Authenticatie mislukt!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetFile.php:95
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetFile.php:124
+msgid "Upload Unsuccessful"
+msgstr "Upload Mislukt"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetFile.php:99
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetFile.php:118
+msgid "Successful upload"
+msgstr "Geslaagde Upload"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_GetFile.php:122
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:66
+msgid "The uploaded file exceeds the maximum upload limit"
+msgstr "De upload overschrijd de maximale upload limiet"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ModuleDuplicatePage.php:48
+msgid "Edit Module Duplicate"
+msgstr "Bewerk Module Duplicaat"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:35
+msgid "This theme has no settings"
+msgstr "Dit thema heeft geen instellingen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:47
+msgid "Flutter Theme Settings"
+msgstr "Flutter Thema Instellingen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:111
+msgid "Save Settings"
+msgstr "Sla Instellingen op"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:149
+msgid "are you sure?"
+msgstr "weet je het zeker?"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:167
+msgid "You don't have any setting created,  start creating one"
+msgstr "U heeft geen instellingen gemaakt, begin met het maken van een"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:186
+msgid "add new template option"
+msgstr "voeg nieuw sjabloon optie toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:249
+msgid "Create a new layout Setting"
+msgstr "Maak een nieuwe lay-out Instelling"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:261
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:43
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:110
+msgid "Description"
+msgstr "Omschrijving"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ThemeSettingsPage.php:287
+msgid "Create"
+msgstr "Maak"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:155
+msgid "General"
+msgstr "Algemeen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:157
+msgid "Theme Options"
+msgstr "Thema Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:159
+msgid "Module Properties"
+msgstr "Module instellingen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:163
+msgid "Save"
+msgstr "Sla op"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:168
+msgid "Content Here."
+msgstr "Inhoud Hier."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:172
+msgid "Resize both columns"
+msgstr "Weizig het formaat van beide kolommen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:174
+msgid "Resize height"
+msgstr "Weizig hoogte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:175
+msgid "Resize width"
+msgstr "Weizig breedte"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:176
+msgid "Re-order modules"
+msgstr "Her-order modules"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/FlutterLayout.php:187
+msgid "Module \"Recent\""
+msgstr "Module \"Recent\""
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:36
+msgid "Duplication"
+msgstr "Duplicatie"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:37
+msgid "The group can be duplicated"
+msgstr "Deze groep kan worden gedupliceerd"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:41
+msgid "Position"
+msgstr "Positie"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:42
+msgid "Add the group on the right."
+msgstr "Voeg de groep toe aan de rechterkant"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:50
+msgid "Add custom fields later by editing this custom group."
+msgstr "Voeg aangepaste velden later toe door deze aangepaste groep te bewerken."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomGroupPage.php:69
+msgid "Edit Group"
+msgstr "Bewerk Groep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SnipshotCallback.php:6
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_removeFiles.php:8
+msgid "Authentication failed!"
+msgstr "Authenticatie mislukt!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SnipshotCallback.php:43
+msgid "Snipshot callback"
+msgstr "Snipshot terugroep"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SnipshotCallback.php:96
+msgid "The file was updated successfuly"
+msgstr "Het bestand was succesvol geupdate"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SnipshotCallback.php:97
+msgid "Please save the page in order to see the changes."
+msgstr "Sla deze pagina alstublieft op om de veranderingen te zien."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SnipshotCallback.php:97
+msgid "Close this window"
+msgstr "Sluit dit venster"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomWritePanelPage.php:12
+msgid "Create Custom Write Panel"
+msgstr "Maak Aangepast Schrijf Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:310
+msgid "Flutter > Manage"
+msgstr "Flutter > Beheren"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:310
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:322
+msgid "Flutter"
+msgstr "Flutter"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:313
+msgid "Write Panels"
+msgstr "Schrijf Panelen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:315
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:423
+msgid "Template Options"
+msgstr "Sjabloon Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:322
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:22
+msgid "Flutter Options"
+msgstr "Flutter Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:339
+msgid "New"
+msgstr "Nieuw"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:340
+msgid "Manage"
+msgstr "Beheer"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:443
+msgid "New Post"
+msgstr "Nieuw Bericht"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:444
+msgid "Drafts"
+msgstr "Ontwerpen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:445
+msgid "New Page"
+msgstr "Nieuwe Pagina"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:446
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SWFUpload.php:42
+msgid "Upload"
+msgstr "Upload"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_Menu.php:447
+msgid "Comments"
+msgstr "Reacties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:27
+msgid "A module with the same name already exists. Please choose a different name."
+msgstr "Een module met de zelfde naam bestaat al. Kies alstublieft een andere naam."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:63
+msgid "Edit Custom Write Module"
+msgstr "Bewerk Aangepaste Schrijf Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:96
+msgid "Custom Write Module Info"
+msgstr "Aangepaste Schrijf Module Info"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:97
+msgid "Back to Custom Modules List"
+msgstr "Terug naar Aangepaste Modules Lijst"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:119
+msgid "Are you sure you want to delete this module? Please notice that all the template files of this module will be deleted too."
+msgstr "Weet je zeker dat je deze module wilt verwijderen? Onthoud alstublieft dat alles sjabloon bestanden van deze module ook zullen verwijderd."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:123
+msgid "Edit Module"
+msgstr "Bewerk Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:124
+msgid "Delete Module"
+msgstr "Verwijder Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:131
+msgid "Module Duplicates for Layout"
+msgstr "Module Kopiën voor de Lay-out"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:133
+msgid "Create Duplicate"
+msgstr "Maak Kopie"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:141
+msgid "Action"
+msgstr "Actie"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:152
+msgid "Rename"
+msgstr "Hernoem"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:184
+msgid "The module was imported successfuly."
+msgstr "De module was succesvol geïmporteerd"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModulePage.php:185
+msgid " to edit the module."
+msgstr " om de module te bewerken"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:29
+msgid "Successful upload!"
+msgstr "Geslaagde upload!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:69
+msgid "Upload Unsuccessful!"
+msgstr "Upload Mislukt!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:80
+msgid "Failed to upload the file!"
+msgstr "Het uploaden van het bestand is mislukt!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:213
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_upload.php:216
+msgid "File"
+msgstr "Bestand"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModule.php:340
+msgid "Could not open archive"
+msgstr "Kon het archief niet openen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CustomWriteModule.php:352
+msgid "Cannot find unzip program!"
+msgstr "Kan het unzip programma niet vinden!"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ExportModule.php:54
+msgid "Cannot find zip program"
+msgstr "Can het zip programma niet vinden"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ExportModule.php:78
+msgid "Export Module"
+msgstr "Exporteer Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_ExportModule.php:126
+msgid "If you want to export Write Panels along with the module, check them below:"
+msgstr "Als je de Schrijf Panelen wilt exporteren samen met de module, vink ze dan hieronder aan:"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_SWFUpload.php:52
+msgid "Or URL"
+msgstr "Of URL"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomWriteModulePage.php:12
+msgid "Create Custom Write Module"
+msgstr "Maak Aangepaste Schrijf Module"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:27
+msgid "Write Panel Options"
+msgstr "Schrijf Paneel Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:31
+msgid "Hide Post Panel"
+msgstr "Verberg Bericht Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:35
+msgid "Hide Wordpress Post panel"
+msgstr "Verberg Wordpress Bericht paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:40
+msgid "Hide Page Panel"
+msgstr "Verberd Pagina Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:44
+msgid "Hide Wordpress Page panel"
+msgstr "Verberg Wordpress Pagina paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:49
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:53
+msgid "Hide Visual Editor (multiline)"
+msgstr "Verberd Visual Editor (multilijn)"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:58
+msgid "Editing Prompt"
+msgstr "Bewerkings Prompt"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:62
+msgid "Prompt when editing a Post not created with Custom Write Panel."
+msgstr "Waarschuw me als ik een Bericht bewerk die niet is gemaakt met een Aangepast Schrijf Paneel."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:67
+msgid "Assign to Role"
+msgstr "Wijs Rol toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:71
+msgid ""
+"This option will create a capability for each write panel such that the write panel is accessible by the Administrator only by default.\n"
+"\t\t\t You can assign the write panel to other roles using "
+msgstr ""
+"Deze optie zal de mogelijkheid maken dat elk schrijfpaneel standaar alleen bereikbaar is door de Administrator.\n"
+"\t\t\t U kan het schrijf paneel toewijzen aan andere rollen die gebruik maken van"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:77
+msgid "Default Panel"
+msgstr "Standaard Paneel"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:102
+msgid "Layout Options"
+msgstr "Lay-out Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:103
+msgid "Allows you to add modules to the blog."
+msgstr "Staat je toe om modules toe te voegen aan de blog."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:107
+msgid "Layout Tab"
+msgstr "Lay-Out Tab"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:111
+msgid "Show Layout tab."
+msgstr "Toon Lay-out tab."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:117
+msgid "Style Tab"
+msgstr "Stijl tab"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:121
+msgid "Show Style tab."
+msgstr "Toon Stijl tab."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:127
+msgid "Layout Instructions"
+msgstr "Lay-out Instructies"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:131
+msgid "Display the instructions on the Layout page."
+msgstr "Toon de instructies op de Lay-out pagina."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:137
+msgid "Zones Names"
+msgstr "Zone Namen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:141
+msgid "Show zones names on droppable zones."
+msgstr "Toon zone namen op dropbare zones."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:148
+msgid "Other Options"
+msgstr "Andere Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:152
+msgid "Snipshot"
+msgstr "Snipshot"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:156
+msgid "Use Snipshot services instead of cropper to edit photos."
+msgstr "Gebruik Snipshot diensten in plaats van bijsnijder om foto's te bewerken."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:161
+msgid "Edit-n-place"
+msgstr "Bewerk en plaats"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:165
+msgid "Edit posts instantly from the post page."
+msgstr "Bewerk berichten meteen vanaf de bericht pagina."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:175
+msgid "EIP highlight color"
+msgstr "EIP aantoon kleur"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:179
+msgid "Use color to highlight areas EIP"
+msgstr "Gebruik kleur om EIP velden aan te tonen"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:184
+msgid "Browser uploader"
+msgstr "Browser uploader"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:188
+msgid "Use Browser uploader instea Flash Uploader"
+msgstr "Gebruik Browser uploader in plaats van Flash Uploader"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:195
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:199
+msgid "Uninstall Flutter"
+msgstr "Verwijder Flutter"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:203
+msgid "Type <strong>uninstall</strong> into the textbox, click <strong>Update Options</strong>, and all the tables created by this plugin will be deleted"
+msgstr "Typ <strong>uninstall</strong> in het textvak, klik <strong>Update Opties</strong>, en alles tabellen die door deze plugin zijn gemaakt worden verwijderd"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_OptionsPage.php:210
+msgid "Update Options"
+msgstr "Update Opties"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:13
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:171
+msgid "Create Custom Field"
+msgstr "Maak Aangepast Veld"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:44
+msgid ""
+"Type a unique name for the field, the name must be unique among all fields \n"
+"\t\t\t\t\tin this panel. The name of the field is the key by which you can retrieve \n"
+"\t\t\t\t\tthe field value later."
+msgstr ""
+"Typ een unieke naam voor het veld, de naam moet uniek zijn voor alle velden \n"
+"\t\t\t\t\tin dit paneel. De naam van het veld is de sleutel die je kan ophalen \n"
+"\t\t\t\t\tin het veld waarde later."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:50
+msgid ""
+"As you type the name, Flutter will display fields from other\n"
+"\t\t\t\t\tpanels that are similar to the name you typed. If you selected one of them,\n"
+"\t\t\t\t\tFlutter will create a field similar to the chosen one."
+msgstr ""
+"Terwijl je de naam typt, zal Flutter de velden tonen \n"
+"\t\t\t\t\tvan andere panelen die overeenkomen met de naam die je typte. Als je er \n"
+"\t\t\t\t\teen van kiest zal Flutter een veld maken in overeenkomst met de gekozen."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:62
+msgid ""
+"Type a label for the field. The label of the field is displayed\n"
+"\t\t\t\t\tbeside the field in Write Panel page."
+msgstr ""
+"Typ een label voor het veld. De label van het veld is getoond\n"
+"\t\t\t\t\tnaast het veld in de Schrijf Paneel pagina."
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:152
+msgid "Continue"
+msgstr "Ga verder"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:263
+msgid "Custom"
+msgstr "Aangepast"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreateCustomFieldPage.php:267
+msgid "Custom Options List"
+msgstr "Aangepaste Opties Lijst"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/RCCWP_CreatePanelModulePage.php:20
+msgid "Add Module"
+msgstr "Voeg Module Toe"
+
+#: /home/sites/wp/wp-content/plugins/Flutter/cropper.php:193
+msgid "Crop It"
+msgstr "Snij het bij"
+
+#, fuzzy
+#~ msgid "field_required"
+#~ msgstr "Necesario"
+#~ msgid "Type:"
+#~ msgstr "Tipo:"
+#~ msgid "Name:"
+#~ msgstr "Nombre:"
+#~ msgid "Description:"
+#~ msgstr "Descripción:"
+#~ msgid "Custom Fields:"
+#~ msgstr "Campos Personalizados"
+#~ msgid "Options:"
+#~ msgstr "Opciones:"
+#~ msgid "Label:"
+#~ msgstr "Etiqueta:"
+#~ msgid "Can be duplicated:"
+#~ msgstr "Puede ser duplicado:"
+#~ msgid "Order:"
+#~ msgstr "Orden:"
+#~ msgid "how to"
+#~ msgstr "aqui traduccion de how to 1"
+#~ msgid "how to2"
+#~ msgstr "aqui del how to 2, espero que jale"
+
