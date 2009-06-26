@@ -107,8 +107,6 @@ class RCCWP_WritePostPage {
 		<script type="text/javascript" src="<?php echo FLUTTER_URI?>js/greybox/AJS.js"></script>
 		<script type="text/javascript" src="<?php echo FLUTTER_URI?>js/greybox/AJS_fx.js"></script>
 		<script type="text/javascript" src="<?php echo FLUTTER_URI?>js/greybox/gb_scripts.js"></script>
-		<script type="text/javascript" src="<?php echo FLUTTER_URI; ?>js/swfcallbacks.js" ></script>
-		<script type="text/javascript" src="<?php echo get_bloginfo('wpurl');?>/wp-includes/js/swfupload/swfupload.js"></script>
         <script type="text/javascript" src="<?php echo FLUTTER_URI?>js/groups.js"></script>
         
 		<script type="text/javascript">
@@ -266,19 +264,23 @@ class RCCWP_WritePostPage {
 
 		
 		<script type="text/javascript">
-            var wp_root         = "<?php echo get_bloginfo('wpurl');?>";
+			var wp_root         = "<?php echo get_bloginfo('wpurl');?>";
 			var GB_ROOT_DIR     = "<?php echo FLUTTER_URI?>js/greybox/";
 			var flutter_path    = "<?php echo FLUTTER_URI; ?>";
-            var flutter_relative = "<?php echo FLUTTER_URI_RELATIVE;?>";
-            var phpthumb        = "<?php echo PHPTHUMB;?>";
+			var flutter_relative = "<?php echo FLUTTER_URI_RELATIVE;?>";
+			var phpthumb        = "<?php echo PHPTHUMB;?>";
 			var swf_authentication = "<?php if ( function_exists('is_ssl') && is_ssl() ) echo $_COOKIE[SECURE_AUTH_COOKIE]; else echo $_COOKIE[AUTH_COOKIE]; ?>" ;
 			var swf_nonce = "<?php echo wp_create_nonce('media-form'); ?>" ;
 		</script>
 		<script type="text/javascript" src="<?php echo FLUTTER_URI?>js/greybox/AJS.js"></script>
 		<script type="text/javascript" src="<?php echo FLUTTER_URI?>js/greybox/AJS_fx.js"></script>
 		<script type="text/javascript" src="<?php echo FLUTTER_URI?>js/greybox/gb_scripts.js"></script>
+		
+		<script type="text/javascript" src="<?php echo FLUTTER_URI?>thirdparty/swfupload/swfupload.js"></script>
+		<script type="text/javascript" src="<?php echo FLUTTER_URI?>thirdparty/swfupload/simple/swfupload.queue.js"></script>
+		<script type="text/javascript" src="<?php echo FLUTTER_URI?>thirdparty/swfupload/simple/fileprogress.js"></script>
+		<script type="text/javascript" src="<?php echo FLUTTER_URI?>thirdparty/swfupload/simple/handlers.js"></script>
 		<script type="text/javascript" src="<?php echo FLUTTER_URI; ?>js/swfcallbacks.js" ></script>
-		<script type="text/javascript" src="<?php echo get_bloginfo('wpurl');?>/wp-includes/js/swfupload/swfupload.js"></script>
 
 		<script type="text/javascript">
 				function isset(  ) {

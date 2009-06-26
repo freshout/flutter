@@ -44,13 +44,14 @@ class RCCWP_SWFUpload
                         </td>
 						<td style="border-bottom-width: 0px">
                             <span id="upload-<?php echo $inputName?>" class="upload_file" ></span>
+			    <input id="btnCancel" type="button"  disabled="disabled" style="display: none;" />
                         </td>
 					</tr>
 				<?php
 				}
 				?>
 
-				<tr style="background:transparent">
+				<tr >
 					<td style="border-bottom-width: 0px;padding: 0; padding-bottom:32px;"><label for="upload_url" ><?php _e('Or URL', $flutter_domain); ?>:</label></td>
 					<td style="border-bottom-width: 0px">
 						<input id="upload_url_<?php echo $inputName ?>"
@@ -63,40 +64,50 @@ class RCCWP_SWFUpload
 				</tr>
 
 			</table>
-		                            <script type="text/javascript">
-                                
-                                element =  new SWFUpload({
-                                        //button settings
-	    		                        button_text: '<span class="button">Browse</span>',
-                                        button_text_style: '.button { text-align: center; font-weight: bold; font-family:"Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,sans-serif; }',
-			                            button_height: "24",
-                            			button_width: "132",
-                	    	        	button_image_url: wp_root+'/wp-includes/images/upload.png',
-                		            	file_post_name: "async-upload",
-                                        
-                                        //requeriments settings
-                                        upload_url  : flutter_path + "/RCCWP_GetFile.php",
-           		                	    flash_url :  wp_root+"/wp-includes/js/swfupload/swfupload.swf",
-                                        file_size_limit : "20 MB",
-                                        button_placeholder_id : "upload-"+ "<?php echo $inputName;?>",
-                                        debug: false,
-    
-                                        //custom settings
-                                        custom_settings :{
-                                            'file_id' : "<?php echo $inputName;?>"
-                                        },
-                                            
-                                        //handlers
-                                        file_queued_handler : adjust,
-                                        upload_success_handler :  completed,
-            
-                                        post_params : {
-		                                    auth_cookie : swf_authentication,
-                                        	_wpnonce : swf_nonce
-        		                    	}
-                        	    	});
-                            </script>
- 
+			
+			<script type="text/javascript">
+		var swfu_flutter;
+
+		jQuery(document).ready(function(){
+			
+			var settings = {
+				flash_url : flutter_path + "thirdparty/swfupload/swfupload.swf",
+				upload_url: flutter_path + "RCCWP_GetFile.php",
+				
+				post_params : { auth_cookie : swf_authentication, _wpnonce : swf_nonce },
+				file_size_limit : "20 MB",
+				file_types : "*.*",
+				file_types_description : "All Files",
+				file_queue_limit : 0,
+				file_post_name: "async-upload",
+				custom_settings : {
+					cancelButtonId : "btnCancel",
+					file_id : "<?php echo $inputName;?>",
+					upload_target : "<?php echo $inputName;?>"
+				},
+				debug: false,
+
+				// Button settings
+				button_image_url: wp_root+'/wp-includes/images/upload.png',
+				button_width: "132",
+				button_height: "24",
+				button_placeholder_id: "upload-"+ "<?php echo $inputName;?>",
+				button_text: '<span class="button">Browse</span>',	
+				button_text_style: '.button { text-align: center; font-weight: bold; font-family:"Lucida Grande","Lucida Sans Unicode",Tahoma,Verdana,sans-serif; }',
+
+				
+				// The event handler functions are defined in handlers.js
+				file_queued_handler : adjust,
+				upload_success_handler : completed
+			};
+
+			swfu_flutter = new SWFUpload(settings);
+			
+			
+	     });
+	     
+	</script>
+	
 		<?php
 	}
 }
