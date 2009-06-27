@@ -38,7 +38,7 @@ class RCCWP_CreateCustomFieldPage
 		<tr valign="top">
 			<th scope="row"><?php _e("Name", $flutter_domain); ?>:</th> 
 			<td>  
-				<input name="custom-field-name" id="custom-field-name" size="40" type="text"  onkeyup="ajax_showOptions(this,'getFieldsByLetters',event)"/>
+				<input name="custom-field-name" id="custom-field-name" size="40" type="text" />
 				<input type="hidden" id="custom-field-name_hidden" name="custom-field-name_hidden" onchange="copyField();">
 				<p>
 					<?php _e('Type a unique name for the field, the name must be unique among all fields 

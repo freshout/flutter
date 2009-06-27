@@ -97,7 +97,7 @@ class RCCWP_CustomGroup
 			" LEFT JOIN " . RC_CWP_TABLE_CUSTOM_FIELD_PROPERTIES . " cp ON cf.id = cp.custom_field_id" .
 			" JOIN " . RC_CWP_TABLE_CUSTOM_FIELD_TYPES . " tt ON cf.type = tt.id" . 
 			" WHERE group_id = " . $customGroupId .
-			" ORDER BY cf.display_order";
+			" ORDER BY cf.display_order,cf.id ASC";
 
 		$results =$wpdb->get_results($sql);
 
