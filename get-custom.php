@@ -416,10 +416,10 @@ function option($variable_name){
  *
  * @param string $groupName 
  */
-function getGroupOrder(){
+function getGroupOrder($field_name){
     global $post,$wpdb;
     
-    $elements  = $wpdb->get_results("SELECT group_count FROM ".RC_CWP_TABLE_POST_META." WHERE post_id = ".$post->ID." ORDER BY order_id ASC");
+    $elements  = $wpdb->get_results("SELECT group_count FROM ".RC_CWP_TABLE_POST_META." WHERE post_id = ".$post->ID." AND field_name = '".$field_name."' ORDER BY order_id ASC");
    
     foreach($elements as $element){
        $order[] =  $element->group_count;
