@@ -1619,30 +1619,32 @@ padding:4px 5px 2px;
 		if(!$customField->properties['step']){
 			$customField->properties['step']=0;
 		}
-		?>
+		global $wp_version;
+		if($wp_version <= 2.7){ ?>
 		<link rel="stylesheet" href="<?=FLUTTER_URI?>css/flora.slider.css" type="text/css" media="screen" title="Flora (Default)">
 		<script type="text/javascript" src="<?=FLUTTER_URI?>js/ui.slider.js"></script>
+		<?php }else{ ?>
+			<link rel="stylesheet" href="<?=FLUTTER_URI?>css/base/ui.all.css" type="text/css" media="screen" />
+			<script type="text/javascript" src="<?=FLUTTER_URI?>js/ui.core_WP28.js"></script>
+			<script type="text/javascript" src="<?=FLUTTER_URI?>js/ui.slider_WP28.js"></script>
+		<?php } ?>
+			<script>
+				jQuery('document').ready(function(){
+					jQuery('#slider_<?php echo $inputName?>').slider({range: false, value: <?=$value?> , min: <?=$customField->properties['min']?>, max: <?=$customField->properties['max']?>, stepping: <?=$customField->properties['step']?>
 
-		<script type="text/javascript">
-			jQuery('document').ready(function(){
-				jQuery('#slider_<?php echo $inputName?>').slider({range: true, start: <?=$value?> , min: <?=$customField->properties['min']?>, max: <?=$customField->properties['max']?>, stepping: <?=$customField->properties['step']?>,
-							handles: [ {start: <?=$value?>, stepping: <?=$customField->properties['step']?>,min: <?=$customField->properties['min']?>, max: <?=$customField->properties['max']?>, id: 'slider_<?php echo $inputName?>'} ]
-							//,change: function(e,ui) {
-							//	jQuery('#slide_value_<?php echo $inputName?>').empty();
-							//	jQuery('#slide_value_<?php echo $inputName?>').append(ui.value);
-							//	jQuery('#<?php echo $inputName?>').val(ui.value);
-							//	}
-							,'slide': function(e, ui){ 
-                    jQuery('#slide_value_<?php echo $inputName?>').empty();
-								jQuery('#slide_value_<?php echo $inputName?>').append(ui.value);
-								jQuery('#<?php echo $inputName?>').val(ui.value);
-            }
+								,'slide': function(e, ui){ 
+	                    jQuery('#slide_value_<?php echo $inputName?>').empty();
+									jQuery('#slide_value_<?php echo $inputName?>').append(ui.value);
+									jQuery('#<?php echo $inputName?>').val(ui.value);
+	            }
 
-								});
-			//jQuery('#slider_<?php echo $inputName?>').slider("moveTo", "+=6")
-			//jQuery('#slider_<?php echo $inputName?>').slider("value", "9")
-			});
-		</script>
+									});
+
+				});
+				
+			
+			</script>
+	
 		<style>
 		.slider_numeber_show{
 			margin-top: -16px;
