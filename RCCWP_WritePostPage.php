@@ -989,7 +989,7 @@ class RCCWP_WritePostPage {
 		$wp_default_editor = wp_default_editor();
 		if ( 'html' == $wp_default_editor ) { ?>
 		    <script type="text/javascript">
-			Event.observe(window, 'load', function() {		    
+			jQuery(document).ready(function(){	   
 			    tinyMCE.execCommand('mceAddControl', true, "content");
 			    switchEditors.go('content', 'html');
 			});
@@ -1001,7 +1001,9 @@ class RCCWP_WritePostPage {
 		if ($hide_visual_editor == '' || $hide_visual_editor == 0){
 		?>
 		<script type="text/javascript">
-			Event.observe(window, 'load', function() {
+		jQuery(document).ready(function(){ 
+		    });
+			jQuery(document).ready(function(){	 
 			    tinyMCE.execCommand('mceAddControl', true, "<?php echo $inputName?>");
 			});
 
