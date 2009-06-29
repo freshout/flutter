@@ -1630,7 +1630,9 @@ padding:4px 5px 2px;
 		<?php } ?>
 			<script>
 				jQuery('document').ready(function(){
-					jQuery('#slider_<?php echo $inputName?>').slider({range: false, value: <?=$value?> , min: <?=$customField->properties['min']?>, max: <?=$customField->properties['max']?>, stepping: <?=$customField->properties['step']?>
+					jQuery('#slider_<?php echo $inputName?>').slider({range: false, value: <?=$value?> , min: <?=$customField->properties['min']?>, max: <?=$customField->properties['max']?>, stepping: <?=$customField->properties['step']?>,
+					handles: [ {start: <?=$value?>, stepping: <?=$customField->properties['step']?>,min: <?=$customField->properties['min']?>, max: <?=$customField->properties['max']?>, id: 'slider_<?php echo $inputName?>'} ]
+					
 
 								,'slide': function(e, ui){ 
 	                    jQuery('#slide_value_<?php echo $inputName?>').empty();
