@@ -31,6 +31,7 @@ Follow the following steps to install this plugin.
 == Upgrade ==
 
 After version .30 the files flutter folder should be in the wp-content folder, if you be upgrading from an older version to .30 put your files in this place. 
+Upgrade to latest version with few in twist on code may be required
 
 == Frequently Asked Questions ==
 
