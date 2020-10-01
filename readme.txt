@@ -1,4 +1,4 @@
-=== Flutter ===
+=== Flutter Wordpress ===
 Contributors: freshout
 Tags: custom write panel, custom, write panel, cms, freshout
 Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=navid%40freshout%2eus&lc=US&item_name=Flutter&item_number=Flutter_Donation&cn=Add%20special%20instructions%20to%20the%20seller&no_shipping=2&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted
